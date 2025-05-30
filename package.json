@@ -1,0 +1,17 @@
+{
+  "name": "salon",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "tailwindcss": "^4.1.8"
+  }
+}

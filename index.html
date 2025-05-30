@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/images/favicons/site.webmanifest" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Salon Dian Tanjung</title>
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body class="m-0 p-0 font-source">
+    <nav
+      class="navbar p-0 m-0 flex flex-col border-2 border-gray-900 bg-gray-100 shadow-md"
+    >
+      <div
+        class="header-info flex-1 flex items-center justify-between border-gray-900"
+        style="height: clamp(50px, 6vw, 70px)"
+      >
+        <h2
+          class="title flex-1 h-full flex text-gray-900 font-semibold items-center title-size"
+          style="padding: clamp(8px, 1.2vw, 12px)"
+        >
+          Salon Dian Tanjung
+        </h2>
+        <div
+          class="status flex text-gray-900 font-medium self-stretch items-center bg-secondary justify-center border-l-2 border-gray-900 border-r-2 md:border-r-0 nav-size"
+          style="
+            padding: clamp(8px, 1.2vw, 12px);
+            min-width: clamp(80px, 18vw, 200px);
+          "
+        >
+          Open
+        </div>
+        <div
+          class="w-12 md:w-0 transition-all duration-300 ease-in-out flex cursor-pointer font-medium overflow-hidden self-stretch items-center bg-secondary justify-center hover:bg-primary hover:text-gray-100"
+          onclick="toggleNav()"
+        >
+          &
+        </div>
+      </div>
+      <ul
+        class="nav-list flex-1 flex list-none overflow-hidden max-h-0 md:max-h-80"
+        id="navList"
+      >
+        <li
+          class="nav-item flex-1 flex text-center items-center justify-center border-l-0 border-r-2 border-t-2 border-gray-900 hover:bg-primary group"
+          style="padding: clamp(10px, 1.5vw, 12px)"
+        >
+          <a
+            href="#"
+            class="text-gray-100 font-semibold no-underline nav-size group-hover:text-gray-100"
+            >Overview</a
+          >
+        </li>
+        <li
+          class="nav-item flex-1 flex text-center items-center justify-center border-r-2 border-t-2 border-gray-900 hover:bg-primary group"
+          style="padding: clamp(10px, 1.5vw, 12px)"
+        >
+          <a
+            href="#"
+            class="text-gray-900 font-semibold no-underline nav-size group-hover:text-gray-100"
+            >About</a
+          >
+        </li>
+        <li
+          class="nav-item flex-1 flex text-center items-center justify-center border-r-2 border-t-2 border-gray-900 hover:bg-primary group"
+          style="padding: clamp(10px, 1.5vw, 12px)"
+        >
+          <a
+            href="#"
+            class="text-gray-900 font-semibold no-underline nav-size group-hover:text-gray-100"
+            >Services</a
+          >
+        </li>
+        <li
+          class="nav-item flex-1 flex text-center items-center justify-center border-r-2 border-t-2 border-gray-900 hover:bg-primary group"
+          style="padding: clamp(10px, 1.5vw, 12px)"
+        >
+          <a
+            href="#"
+            class="text-gray-900 font-semibold no-underline nav-size group-hover:text-gray-100"
+            >Pricing</a
+          >
+        </li>
+        <li
+          class="nav-item flex-1 flex text-center items-center justify-center border-t-2 hover:bg-primary group"
+          style="padding: clamp(10px, 1.5vw, 12px)"
+        >
+          <a
+            href="#"
+            class="text-gray-900 font-semibold no-underline nav-size group-hover:text-gray-100"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const firstItem = document.querySelector(".nav-item");
+        if (firstItem) {
+          firstItem.classList.add("bg-primary");
+          const link = firstItem.querySelector("a");
+          if (link) {
+            link.classList.add("text-gray-100");
+          }
+        }
+      });
+
+      function toggleNav() {
+        const navList = document.getElementById("navList");
+        if (navList.classList.contains("max-h-0")) {
+          navList.classList.remove("max-h-0");
+          navList.classList.add("max-h-80");
+        } else {
+          navList.classList.add("max-h-0");
+          navList.classList.remove("max-h-80");
+        }
+      }
+
+      document.querySelectorAll(".nav-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          document.querySelectorAll(".nav-item").forEach((navItem) => {
+            navItem.classList.remove("bg-primary");
+            const link = navItem.querySelector("a");
+            if (link) {
+              link.classList.remove("text-gray-100");
+            }
+          });
+
+          this.classList.add("bg-primary");
+          const link = this.querySelector("a");
+          if (link) {
+            link.classList.add("text-gray-100");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

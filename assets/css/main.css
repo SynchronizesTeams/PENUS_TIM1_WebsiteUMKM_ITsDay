@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #e53888;
+  --color-secondary: #f7a8c4;
+  --default-font-family: "Source Sans 3", sans-serif;
+}
+
+body {
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.title-size {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.nav-size {
+  font-size: clamp(1rem, 1.5vw, 1.8rem);
+}
+
+.nav-list {
+  transition: max-height 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-list.closed {
+  max-height: 0;
+}
+
+.nav-list.open {
+  max-height: 200px;
+}
+
+.nav-item {
+  transition: all 0.2s ease;
+}
