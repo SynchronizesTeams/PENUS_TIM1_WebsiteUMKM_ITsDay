@@ -43,30 +43,38 @@ gsap.fromTo(
   }
 );
 
-const overview = new SplitText("#overview-title, #overview-subtitle", {
-  type: "words",
-});
+const sections = [
+  { title: "#overview-title", subtitle: "#overview-subtitle" },
+  { title: "#services-title", subtitle: "#services-subtitle" },
+  { title: "#pricing-title", subtitle: "#pricing-subtitle" },
+  { title: "#contact-title", subtitle: "#contact-subtitle" },
+];
 
-gsap.fromTo(
-  overview.words,
-  {
-    y: 100,
-    opacity: 0,
-  },
-  {
-    y: 0,
-    opacity: 1,
-    duration: 1.5,
-    stagger: 0.1,
-    ease: "power4.out",
-    scrollTrigger: {
-      trigger: "#overview-title",
-      start: "top bottom",
-      end: "bottom center",
-      toggleActions: "play none none reverse",
+sections.forEach((section) => {
+  const targets = `${section.title}, ${section.subtitle}`;
+  const split = new SplitText(targets, { type: "words" });
+
+  gsap.fromTo(
+    split.words,
+    {
+      y: 100,
+      opacity: 0,
     },
-  }
-);
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1.5,
+      stagger: 0.05,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: section.title,
+        start: "top 85%",
+        end: "bottom center",
+        toggleActions: "play none none reverse",
+      },
+    }
+  );
+});
 
 document.querySelectorAll(".card").forEach((card, i) => {
   gsap
