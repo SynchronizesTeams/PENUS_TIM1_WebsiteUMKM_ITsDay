@@ -41,22 +41,30 @@
       <h1 class="text-3xl font-bold font-playfair">DT Salon</h1>
 
       <div class="hidden md:flex items-center space-x-8">
-        <div class="nav-item cursor-pointer flex items-center space-x-1">
+        <a
+          href="#"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>About</span>
           <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
-        </div>
-        <div class="nav-item cursor-pointer flex items-center space-x-1">
+        </a>
+        <a
+          href="#"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>Services</span>
           <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
-        </div>
-        <div class="nav-item cursor-pointer flex items-center space-x-1">
+        </a>
+        <a
+          href="#"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>Pricing</span>
           <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
-        </div>
-        <div class="nav-item cursor-pointer flex items-center space-x-1">
+        </a>
+        <a
+          href="#"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>Contact</span>
           <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
-        </div>
+        </a>
       </div>
 
       <button
@@ -76,34 +84,43 @@
         </div>
 
         <div class="relative z-10 px-4">
-          <h1 class="text-5xl md:text-7xl font-playfair font-extrabold mb-4">
+          <h1
+            id="hero-title"
+            class="text-5xl overflow-hidden md:text-7xl font-playfair font-extrabold mb-4">
             Cantik Alami Terjaga
           </h1>
           <p
+            id="hero-subtitle"
             class="text-lg md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-white/90 hero-subtitle">
             Percayakan perawatan harianmu pada tangan ahli kami.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
+            <a
+              href="#"
               class="btn bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 border border-white/10 px-8 py-4 rounded-full font-medium text-lg cursor-pointer">
-              Book Appointment
-            </button>
-            <button
+              <span>Book Appointment</span>
+            </a>
+            <a
+              href="#"
               class="btn bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/15 transition-all duration-300 px-8 py-4 rounded-full font-medium text-lg flex items-center justify-center space-x-2 hover:-translate-y-0.5 cursor-pointer">
-              <span>View Gallery</span>
+              <span>Lorem Ipsum</span>
               <img src="./assets/images/icons/chevron-right.svg" class="w-5" />
-            </button>
+            </a>
           </div>
         </div>
 
         <div
           class="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-4 px-4">
           <div class="floating-card rounded-2xl p-4 text-center min-w-[120px]">
-            <div class="text-2xl font-bold gradient-text">999+</div>
+            <div class="count overflow-hidden text-2xl font-bold gradient-text">
+              999+
+            </div>
             <div class="text-sm text-white/70">Pelanggan Senang</div>
           </div>
           <div class="floating-card rounded-2xl p-4 text-center min-w-[120px]">
-            <div class="text-2xl font-bold gradient-text">99+</div>
+            <div class="count overflow-hidden text-2xl font-bold gradient-text">
+              99+
+            </div>
             <div class="text-sm text-white/70">Tahun Pengalaman</div>
           </div>
         </div>
@@ -112,14 +129,16 @@
       <section
         class="py-20 z-10 px-4 bg-gradient-to-b from-quaternary to-[#1a0e1d] flex justify-center items-center">
         <div
-          class="max-w-7xl flex flex-col items-center jusctify-center mx-auto gap-16">
+          class="w-full flex flex-col items-center jusctify-center mx-auto gap-16">
           <div class="flex flex-col items-center justify-center w-full">
             <h2
-              class="text-5xl text-center w-2/3 font-playfair font-bold mb-6 gradient-text">
+              id="overview-title"
+              class="text-5xl text-center w-2/3 font-playfair font-bold mb-6 gradient-text relative overflow-hidden">
               Pengalaman kecantikan terbaik untuk setiap pelanggan.
             </h2>
             <p
-              class="text-lg w-1/2 text-center text-white/80 mb-6 leading-relaxed">
+              id="overview-subtitle"
+              class="text-lg w-1/2 text-center text-white/80 mb-6 leading-relaxed relative overflow-hidden">
               Kami berkomitmen untuk memberikan hasil terbaik dalam setiap
               layanan—dari rambut hingga ujung kaki.
             </p>
@@ -127,7 +146,7 @@
 
           <div class="grid grid-cols-2 gap-6">
             <div
-              class="bg-white/10 backdrop-blur-2xl p-5 rounded-xl floating-card">
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
                 <img src="./assets/images/icons/human.svg" class="w-10" />
               </div>
@@ -137,7 +156,7 @@
               <p class="text-sm text-white/70">Lorem ipsum dolor sit amet.</p>
             </div>
             <div
-              class="bg-white/10 backdrop-blur-2xl p-5 rounded-xl floating-card">
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
                 <img src="./assets/images/icons/premium.svg" class="w-10" />
               </div>
@@ -163,62 +182,58 @@
             </p>
           </div>
 
-          <div class="swiper mySwiper px-4">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div
-                  class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
-                  <div>
-                    <div
-                      class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <img src="./assets/images/icons/face.svg" class="w-10" />
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">
-                      Facial Treatment
-                    </h3>
-                    <p class="text-white/70 mb-6">
-                      Perawatan wajah profesional dengan produk premium untuk
-                      kulit sehat dan berseri.
-                    </p>
+          <div class="grid grid-cols-3 gap-6">
+            <div class="card">
+              <div
+                class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
+                <div>
+                  <div
+                    class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <img src="./assets/images/icons/face.svg" class="w-10" />
                   </div>
+                  <h3 class="text-2xl font-semibold mb-4">Facial Treatment</h3>
+                  <p class="text-white/70 mb-6">
+                    Perawatan wajah profesional dengan produk premium untuk
+                    kulit sehat dan berseri.
+                  </p>
                 </div>
               </div>
+            </div>
 
-              <div class="swiper-slide">
-                <div
-                  class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
-                  <div>
-                    <div
-                      class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <img
-                        src="./assets/images/icons/scissors.svg"
-                        class="w-10" />
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Hair Styling</h3>
-                    <p class="text-white/70 mb-6">
-                      Styling dan potong rambut dengan teknik modern dan produk
-                      profesional.
-                    </p>
+            <div class="card">
+              <div
+                class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
+                <div>
+                  <div
+                    class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <img
+                      src="./assets/images/icons/scissors.svg"
+                      class="w-10" />
                   </div>
+                  <h3 class="text-2xl font-semibold mb-4">Hair Styling</h3>
+                  <p class="text-white/70 mb-6">
+                    Styling dan potong rambut dengan teknik modern dan produk
+                    profesional.
+                  </p>
                 </div>
               </div>
+            </div>
 
-              <div class="swiper-slide">
-                <div
-                  class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
-                  <div>
-                    <div
-                      class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <img
-                        src="./assets/images/icons/face-round.svg"
-                        class="w-10" />
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Makeup Service</h3>
-                    <p class="text-white/70 mb-6">
-                      Makeup profesional untuk acara spesial dengan hasil yang
-                      tahan lama dan natural
-                    </p>
+            <div class="card">
+              <div
+                class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
+                <div>
+                  <div
+                    class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <img
+                      src="./assets/images/icons/face-round.svg"
+                      class="w-10" />
                   </div>
+                  <h3 class="text-2xl font-semibold mb-4">Makeup Service</h3>
+                  <p class="text-white/70 mb-6">
+                    Makeup profesional untuk acara spesial dengan hasil yang
+                    tahan lama dan natural
+                  </p>
                 </div>
               </div>
             </div>
@@ -511,7 +526,7 @@
       </section>
     </main>
 
-    <div class="btn fixed bottom-6 left-0 z-10">
+    <div class="cursor-pointer fixed bottom-6 left-0 z-10">
       <div
         class="language-selector flex items-center space-x-2 bg-white/10 border border-white/20 transition-all duration-300 hover:bg-white/30 hover:border-white/30 backdrop-blur-md px-4 py-2 rounded-r-full cursor-pointer">
         <span class="text-sm">Indonesia</span>

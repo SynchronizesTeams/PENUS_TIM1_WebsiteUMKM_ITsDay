@@ -33,6 +33,14 @@ html {
   @apply backdrop-blur-md bg-white/10 border border-white/10 shadow-md;
 }
 
+.hover-rotate-text {
+  @apply overflow-hidden relative;
+}
+
+.hover-rotate-text span {
+  @apply inline-block;
+}
+
 .gradient-cursor {
   position: fixed;
   width: 400px;

@@ -1,12 +1,21 @@
 import Lenis from "lenis";
 import gsap from "gsap";
-import Swiper from "swiper";
-import "swiper/css";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import "lenis/dist/lenis.css";
 
-const lenis = new Lenis({
-  autoRaf: true,
+const lenis = new Lenis();
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
 });
+
+gsap.ticker.lagSmoothing(0);
 
 const gradientCursor = document.getElementById("gradientCursor");
 const gradientCursorInner = document.getElementById("gradientCursorInner");
@@ -18,20 +27,136 @@ let cursorY = 0;
 let cursorInnerX = 0;
 let cursorInnerY = 0;
 
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1.2,
-  spaceBetween: 24,
-  loop: true,
-  grabCursor: true,
-  breakpoints: {
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
+const text = new SplitText("#hero-title, #hero-subtitle", { type: "words" });
+gsap.fromTo(
+  text.words,
+  {
+    y: 100,
+    opacity: 0,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 1.5,
+    stagger: 0.1,
+    ease: "power4.out",
+  }
+);
+
+const overview = new SplitText("#overview-title, #overview-subtitle", {
+  type: "words",
 });
+
+gsap.fromTo(
+  overview.words,
+  {
+    y: 100,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 1.5,
+    stagger: 0.1,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: "#overview-title",
+      start: "top bottom",
+      end: "bottom center",
+      toggleActions: "play none none reverse",
+    },
+  }
+);
+
+document.querySelectorAll(".card").forEach((card, i) => {
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: card,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    })
+    .from(card, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: i * 0.15,
+      ease: "power2.out",
+    });
+});
+
+function initHoverEffects() {
+  const hoverElements = document.querySelectorAll(".hover-rotate-text");
+
+  hoverElements.forEach((element) => {
+    const original = element.querySelector("span");
+    const clone = original.cloneNode(true);
+    element.appendChild(clone);
+
+    gsap.set(clone, { position: "absolute", top: 0, left: 0 });
+
+    const originalSplit = SplitText.create(original, { type: "chars" });
+    const cloneSplit = SplitText.create(clone, { type: "chars" });
+
+    gsap.set(cloneSplit.chars, {
+      rotationX: -20,
+      opacity: 0,
+      transformOrigin: "50% 50% -50",
+    });
+
+    const duration = 0.4;
+    const stagger = { each: 0.02, ease: "power2", from: "start" };
+
+    const tl = gsap.timeline({ paused: true });
+
+    tl.to(originalSplit.chars, {
+      duration: duration,
+      rotationX: 30,
+      transformOrigin: "50% 50% -50",
+      stagger: stagger,
+    });
+
+    tl.to(
+      originalSplit.chars,
+      {
+        duration: duration,
+        opacity: 0,
+        stagger: stagger,
+        ease: "power4.in",
+      },
+      0
+    );
+
+    tl.to(
+      cloneSplit.chars,
+      {
+        duration: 0.05,
+        opacity: 1,
+        stagger: stagger,
+      },
+      0.001
+    );
+
+    tl.to(
+      cloneSplit.chars,
+      {
+        duration: duration,
+        rotationX: 0,
+        stagger: stagger,
+      },
+      0
+    );
+
+    element.addEventListener("mouseenter", () => {
+      tl.restart();
+    });
+
+    element.addEventListener("mouseleave", () => {
+      tl.reverse();
+    });
+  });
+}
 
 window.addEventListener("scroll", () => {
   const navbar = document.getElementById("navbar");
@@ -95,34 +220,6 @@ gsap.ticker.add(() => {
   });
 });
 
-// gsap.registerPlugin(ScrollTrigger);
-
-// gsap.from(".card", {
-//   y: 50,
-//   opacity: 0,
-//   duration: 1,
-//   stagger: 0.2,
-//   scrollTrigger: {
-//     trigger: ".card",
-//     start: "top 80%",
-//     end: "bottom 20%",
-//     toggleActions: "play none none reverse",
-//   },
-// });
-
-// gsap.from(".feature-card", {
-//   y: 30,
-//   opacity: 0,
-//   duration: 0.8,
-//   stagger: 0.1,
-//   scrollTrigger: {
-//     trigger: ".feature-grid",
-//     start: "top 80%",
-//     end: "bottom 20%",
-//     toggleActions: "play none none reverse",
-//   },
-// });
-
 const dropdownBtn = document.getElementById("dropdownButton");
 const dropdownList = document.getElementById("dropdownList");
 const selectedOption = document.getElementById("selectedOption");
@@ -138,9 +235,10 @@ dropdownList.querySelectorAll("li").forEach((item) => {
   });
 });
 
-// Optional: klik di luar nutup dropdown
 document.addEventListener("click", (e) => {
   if (!dropdownBtn.contains(e.target) && !dropdownList.contains(e.target)) {
     dropdownList.classList.add("hidden");
   }
 });
+
+initHoverEffects();
