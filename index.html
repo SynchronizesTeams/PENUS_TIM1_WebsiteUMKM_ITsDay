@@ -8,159 +8,611 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./assets/images/favicons/apple-touch-icon.png"
-    />
+      href="./assets/images/favicons/apple-touch-icon.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicons/favicon-32x32.png"
-    />
+      href="./assets/images/favicons/favicon-32x32.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./assets/images/favicons/favicon-16x16.png"
-    />
+      href="./assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="./assets/images/favicons/site.webmanifest" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <title>Salon Dian Tanjung</title>
 
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/main.js" type="module" defer></script>
   </head>
-  <body class="m-0 p-0 font-source">
+
+  <body class="relative text-white bg-quaternary">
+    <div class="gradient-cursor blur-lg" id="gradientCursor"></div>
+    <div class="gradient-cursor-inner blur-lg" id="gradientCursorInner"></div>
+
     <nav
-      class="navbar p-0 m-0 flex flex-col border-2 border-gray-900 bg-gray-100 shadow-md"
-    >
-      <div
-        class="header-info flex-1 flex items-center justify-between border-gray-900"
-        style="height: clamp(50px, 6vw, 70px)"
-      >
-        <h2
-          class="title flex-1 h-full flex text-gray-900 font-semibold items-center title-size"
-          style="padding: clamp(8px, 1.2vw, 12px)"
-        >
-          Salon Dian Tanjung
-        </h2>
-        <div
-          class="status flex text-gray-900 font-medium self-stretch items-center bg-secondary justify-center border-l-2 border-gray-900 border-r-2 md:border-r-0 nav-size"
-          style="
-            padding: clamp(8px, 1.2vw, 12px);
-            min-width: clamp(80px, 18vw, 200px);
-          "
-        >
-          Open
-        </div>
-        <div
-          class="w-12 md:w-0 transition-all duration-300 ease-in-out flex cursor-pointer font-medium overflow-hidden self-stretch items-center bg-secondary justify-center hover:bg-primary hover:text-gray-100"
-          onclick="toggleNav()"
-        >
-          &
-        </div>
+      id="navbar"
+      class="fixed top-4 left-1/2 -translate-x-1/2 w-[95vw] z-20 transition-all border-white/10 duration-300 ease-in-out flex items-center justify-between px-6 py-4 lg:px-12 rounded-full text-white">
+      <h1 class="text-3xl font-bold font-playfair">DT Salon</h1>
+
+      <div class="hidden md:flex items-center space-x-8">
+        <a
+          href="#"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
+          <span>About</span>
+          <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
+        </a>
+        <a
+          href="#"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
+          <span>Services</span>
+          <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
+        </a>
+        <a
+          href="#"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
+          <span>Pricing</span>
+          <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
+        </a>
+        <a
+          href="#"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
+          <span>Contact</span>
+          <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
+        </a>
       </div>
-      <ul
-        class="nav-list flex-1 flex list-none overflow-hidden max-h-0 md:max-h-80"
-        id="navList"
-      >
-        <li
-          class="nav-item flex-1 flex text-center items-center justify-center border-l-0 border-r-2 border-t-2 border-gray-900 hover:bg-primary group"
-          style="padding: clamp(10px, 1.5vw, 12px)"
-        >
-          <a
-            href="#"
-            class="text-gray-100 font-semibold no-underline nav-size group-hover:text-gray-100"
-            >Overview</a
-          >
-        </li>
-        <li
-          class="nav-item flex-1 flex text-center items-center justify-center border-r-2 border-t-2 border-gray-900 hover:bg-primary group"
-          style="padding: clamp(10px, 1.5vw, 12px)"
-        >
-          <a
-            href="#"
-            class="text-gray-900 font-semibold no-underline nav-size group-hover:text-gray-100"
-            >About</a
-          >
-        </li>
-        <li
-          class="nav-item flex-1 flex text-center items-center justify-center border-r-2 border-t-2 border-gray-900 hover:bg-primary group"
-          style="padding: clamp(10px, 1.5vw, 12px)"
-        >
-          <a
-            href="#"
-            class="text-gray-900 font-semibold no-underline nav-size group-hover:text-gray-100"
-            >Services</a
-          >
-        </li>
-        <li
-          class="nav-item flex-1 flex text-center items-center justify-center border-r-2 border-t-2 border-gray-900 hover:bg-primary group"
-          style="padding: clamp(10px, 1.5vw, 12px)"
-        >
-          <a
-            href="#"
-            class="text-gray-900 font-semibold no-underline nav-size group-hover:text-gray-100"
-            >Pricing</a
-          >
-        </li>
-        <li
-          class="nav-item flex-1 flex text-center items-center justify-center border-t-2 hover:bg-primary group"
-          style="padding: clamp(10px, 1.5vw, 12px)"
-        >
-          <a
-            href="#"
-            class="text-gray-900 font-semibold no-underline nav-size group-hover:text-gray-100"
-            >Contact</a
-          >
-        </li>
-      </ul>
+
+      <button
+        class="btn bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] shadow-lg shadow-secondary transition-all duration-300 ease-in-out border border-white/10 hover:shadow-xl hover:-translate-y-0.5 px-6 py-3 rounded-full font-medium">
+        Open Now
+      </button>
     </nav>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const firstItem = document.querySelector(".nav-item");
-        if (firstItem) {
-          firstItem.classList.add("bg-primary");
-          const link = firstItem.querySelector("a");
-          if (link) {
-            link.classList.add("text-gray-100");
-          }
-        }
-      });
+    <main class="">
+      <section
+        class="relative z-10 min-h-screen h-[105vh] flex items-center justify-center text-center rounded-b-3xl border border-white/20 text-white overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <video autoplay muted loop class="w-full h-full object-cover">
+            <source src="./assets/videos/background.mp4" type="video/mp4" />
+          </video>
+          <div class="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
+        </div>
 
-      function toggleNav() {
-        const navList = document.getElementById("navList");
-        if (navList.classList.contains("max-h-0")) {
-          navList.classList.remove("max-h-0");
-          navList.classList.add("max-h-80");
-        } else {
-          navList.classList.add("max-h-0");
-          navList.classList.remove("max-h-80");
-        }
-      }
+        <div class="relative z-10 px-4">
+          <h1
+            id="hero-title"
+            class="text-5xl overflow-hidden md:text-7xl font-playfair font-extrabold mb-4">
+            Cantik Alami Terjaga
+          </h1>
+          <p
+            id="hero-subtitle"
+            class="text-lg md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-white/90 hero-subtitle">
+            Percayakan perawatan harianmu pada tangan ahli kami.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#"
+              class="btn bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 border border-white/10 px-8 py-4 rounded-full font-medium text-lg cursor-pointer">
+              <span>Book Appointment</span>
+            </a>
+            <a
+              href="#"
+              class="btn bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/15 transition-all duration-300 px-8 py-4 rounded-full font-medium text-lg flex items-center justify-center space-x-2 hover:-translate-y-0.5 cursor-pointer">
+              <span>Lorem Ipsum</span>
+              <img src="./assets/images/icons/chevron-right.svg" class="w-5" />
+            </a>
+          </div>
+        </div>
 
-      document.querySelectorAll(".nav-item").forEach((item) => {
-        item.addEventListener("click", function () {
-          document.querySelectorAll(".nav-item").forEach((navItem) => {
-            navItem.classList.remove("bg-primary");
-            const link = navItem.querySelector("a");
-            if (link) {
-              link.classList.remove("text-gray-100");
-            }
-          });
+        <div
+          class="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-4 px-4">
+          <div class="floating-card rounded-2xl p-4 text-center min-w-[120px]">
+            <div class="count overflow-hidden text-2xl font-bold gradient-text">
+              999+
+            </div>
+            <div class="text-sm text-white/70">Pelanggan Senang</div>
+          </div>
+          <div class="floating-card rounded-2xl p-4 text-center min-w-[120px]">
+            <div class="count overflow-hidden text-2xl font-bold gradient-text">
+              99+
+            </div>
+            <div class="text-sm text-white/70">Tahun Pengalaman</div>
+          </div>
+        </div>
+      </section>
 
-          this.classList.add("bg-primary");
-          const link = this.querySelector("a");
-          if (link) {
-            link.classList.add("text-gray-100");
-          }
-        });
-      });
-    </script>
+      <section
+        class="py-20 z-10 px-4 bg-gradient-to-b from-quaternary to-[#1a0e1d] flex justify-center items-center">
+        <div
+          class="w-full flex flex-col items-center jusctify-center mx-auto gap-16">
+          <div class="flex flex-col items-center justify-center w-full">
+            <h2
+              id="overview-title"
+              class="text-5xl text-center w-2/3 font-playfair font-bold mb-6 gradient-text relative overflow-hidden">
+              Pengalaman kecantikan terbaik untuk setiap pelanggan.
+            </h2>
+            <p
+              id="overview-subtitle"
+              class="text-lg w-1/2 text-center text-white/80 mb-6 leading-relaxed relative overflow-hidden">
+              Kami berkomitmen untuk memberikan hasil terbaik dalam setiap
+              layanan—dari rambut hingga ujung kaki.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <img src="./assets/images/icons/human.svg" class="w-10" />
+              </div>
+              <div class="font-semibold text-white mb-1">
+                Tenaga Profesional
+              </div>
+              <p class="text-sm text-white/70">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <img src="./assets/images/icons/premium.svg" class="w-10" />
+              </div>
+              <div class="font-semibold text-white mb-1">Produk Premium</div>
+              <p class="text-sm text-white/70">
+                Kami hanya menggunakan produk berkualitas tinggi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-20 z-10 px-4 bg-gradient-to-t from-quaternary to-[#1a0e1d] flex justify-center items-center">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-5xl font-playfair font-bold mb-6 gradient-text">
+              Layanan Kami
+            </h2>
+            <p class="text-xl text-white/80 max-w-3xl mx-auto">
+              Dari perawatan wajah hingga body treatment, kami menyediakan
+              berbagai layanan kecantikan dengan kualitas terbaik.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-3 gap-6">
+            <div class="card">
+              <div
+                class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
+                <div>
+                  <div
+                    class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <img src="./assets/images/icons/face.svg" class="w-10" />
+                  </div>
+                  <h3 class="text-2xl font-semibold mb-4">Facial Treatment</h3>
+                  <p class="text-white/70 mb-6">
+                    Perawatan wajah profesional dengan produk premium untuk
+                    kulit sehat dan berseri.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div
+                class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
+                <div>
+                  <div
+                    class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <img
+                      src="./assets/images/icons/scissors.svg"
+                      class="w-10" />
+                  </div>
+                  <h3 class="text-2xl font-semibold mb-4">Hair Styling</h3>
+                  <p class="text-white/70 mb-6">
+                    Styling dan potong rambut dengan teknik modern dan produk
+                    profesional.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div
+                class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
+                <div>
+                  <div
+                    class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <img
+                      src="./assets/images/icons/face-round.svg"
+                      class="w-10" />
+                  </div>
+                  <h3 class="text-2xl font-semibold mb-4">Makeup Service</h3>
+                  <p class="text-white/70 mb-6">
+                    Makeup profesional untuk acara spesial dengan hasil yang
+                    tahan lama dan natural
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="z-10 py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-5xl font-playfair font-bold mb-6 gradient-text">
+              Paket Treatment
+            </h2>
+            <p class="text-xl text-white/80">
+              Pilih paket yang sesuai dengan kebutuhan kecantikan Anda
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="pricing-card rounded-3xl p-8 text-center border-2 border-primary/30">
+              <div class="mb-6">
+                <h3 class="text-2xl font-semibold mb-2">Lorem</h3>
+                <div class="text-4xl font-bold gradient-text mb-2">Rp xxxK</div>
+                <div class="text-white/70">Per session</div>
+              </div>
+              <ul class="text-left space-y-3 mb-8">
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="pricing-card rounded-3xl p-8 text-center relative border-2 border-primary/30">
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span
+                  class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-sm font-semibold"
+                  >Most Popular</span
+                >
+              </div>
+              <div class="mb-6">
+                <h3 class="text-2xl font-semibold mb-2">Lorem</h3>
+                <div class="text-4xl font-bold gradient-text mb-2">Rp xxxK</div>
+                <div class="text-white/70">Per session</div>
+              </div>
+              <ul class="text-left space-y-3 mb-8">
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  Lorem ipsum
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="pricing-card rounded-3xl p-8 text-center border-2 border-primary/30">
+              <div class="mb-6">
+                <h3 class="text-2xl font-semibold mb-2">Lorem</h3>
+                <div class="text-4xl font-bold gradient-text mb-2">Rp xxxK</div>
+                <div class="text-white/70">Per session</div>
+              </div>
+              <ul class="text-left space-y-3 mb-8">
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+                <li class="flex items-center">
+                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  lorem ipsum
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="z-10 py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-5xl font-playfair font-bold mb-6 gradient-text">
+              Hubungi Kami
+            </h2>
+            <p class="text-xl text-white/80">
+              Siap melayani Anda dengan appointment system yang mudah dan
+              fleksibel
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <div class="space-y-8">
+              <div
+                class="floating-card rounded-2xl p-6 flex items-center space-x-4">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                  <img src="./assets/images/icons/location.svg" class="w-8" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">Alamat</h3>
+                  <p class="text-white/70">
+                    Ini apa itu? oh GTP. Sama ini, Cilangkap.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="floating-card rounded-2xl p-6 flex items-center space-x-4">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                  <img src="./assets/images/icons/telephone.svg" class="w-8" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">Telepon</h3>
+                  <p class="text-white/70">+62 251 8765432</p>
+                  <p class="text-white/70">+62 812 3456 7890</p>
+                </div>
+              </div>
+
+              <div
+                class="floating-card rounded-2xl p-6 flex items-center space-x-4">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                  <img src="./assets/images/icons/email.svg" class="w-8" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">Email</h3>
+                  <p class="text-white/70">info@dtsalon.com</p>
+                  <p class="text-white/70">booking@dtsalon.com</p>
+                </div>
+              </div>
+
+              <div
+                class="floating-card rounded-2xl p-6 flex items-center space-x-4">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                  <img src="./assets/images/icons/clock.svg" class="w-8" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">Jam Operasional</h3>
+                  <p class="text-white/70">Senin - Sabtu: 09:00 - 21:00</p>
+                  <p class="text-white/70">Minggu: 10:00 - 18:00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card rounded-3xl p-8">
+              <h3 class="text-2xl font-semibold mb-6">Book Appointment</h3>
+              <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium mb-2"
+                      >Nama Lengkap</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
+                      placeholder="Masukkan nama lengkap" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium mb-2"
+                      >Nomor Telepon</label
+                    >
+                    <input
+                      type="tel"
+                      class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
+                      placeholder="Masukkan nomor telepon" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium mb-2">Email</label>
+                  <input
+                    type="email"
+                    class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
+                    placeholder="Masukkan email" />
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium mb-2"
+                      >Layanan</label
+                    >
+                    <div class="relative inline-block w-64">
+                      <div
+                        id="dropdownButton"
+                        class="btn w-full px-6 py-3 text-left rounded-lg bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 flex justify-between items-center">
+                        <span id="selectedOption">Pilih layanan</span>
+                        <img
+                          src="./assets/images/icons/chevron-down.svg"
+                          class="w-5" />
+                      </div>
+
+                      <ul
+                        id="dropdownList"
+                        class="absolute mt-2 w-full bg-white/10 backdrop-blur-md border border-white/10 rounded-xl shadow-lg overflow-hidden hidden z-10">
+                        <li
+                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
+                          Facial Treatment
+                        </li>
+                        <li
+                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
+                          Hair Styling
+                        </li>
+                        <li
+                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
+                          Nail Art
+                        </li>
+                        <li
+                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
+                          Body Spa
+                        </li>
+                        <li
+                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
+                          Makeup Service
+                        </li>
+                        <li
+                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
+                          Eyelash Extension
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium mb-2"
+                      >Tanggal Preferred</label
+                    >
+                    <input
+                      type="date"
+                      class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium mb-2"
+                    >Pesan Tambahan</label
+                  >
+                  <textarea
+                    rows="4"
+                    class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
+                    placeholder="Tambahkan pesan atau request khusus..."></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn w-full bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="cursor-pointer z-30 fixed bottom-6 left-0">
+      <div
+        class="language-selector flex items-center space-x-2 bg-white/10 border border-white/20 transition-all duration-300 hover:bg-white/30 hover:border-white/30 backdrop-blur-md px-4 py-2 rounded-r-full cursor-pointer">
+        <span class="text-sm">Indonesia</span>
+        <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
+      </div>
+    </div>
+
+    <footer class="z-10 relative w-full h-screen overflow-hidden">
+      <div class="absolute inset-0 w-full h-full">
+        <img
+          src="./assets/videos/footer.svg"
+          alt="Footer Background"
+          class="w-full h-full object-cover" />
+      </div>
+
+      <div class="absolute inset-0 flex items-center justify-center p-6">
+        <div
+          class="bg-white/10 backdrop-blur-sm border border-white/5 rounded-3xl p-8 md:p-12 max-w-6xl w-full mx-4 shadow-2xl">
+          <div class="text-center text-white space-y-6">
+            <h2
+              class="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
+              Salon Dian Tanjung
+            </h2>
+
+            <div class="space-y-3 font-inter">
+              <p class="text-white/90 text-base md:text-lg">
+                Ini.. apa itu? oh GTP. Sama ini, Cilangkap. Di Depok klo gak salah
+              </p>
+              <p class="text-white/90 text-base md:text-lg">
+                Telp: +62 812 3456 7890 | Email: info@dtbeauty.com
+              </p>
+            </div>
+
+            <div class="flex justify-center space-x-6 pt-4">
+              <a
+                href="#"
+                class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.758-1.378l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z" />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="border-t border-white/20 pt-6 mt-8">
+              <p class="text-white/60 text-sm font-inter">
+                &copy; 2025 Salon Dian Tanjung. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
