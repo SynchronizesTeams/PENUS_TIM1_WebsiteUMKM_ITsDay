@@ -42,25 +42,25 @@
 
       <div class="hidden md:flex items-center space-x-8">
         <a
-          href="#"
+          href="#overview"
           class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
-          <span>About</span>
+          <span>Overview</span>
           <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
         </a>
         <a
-          href="#"
+          href="#services"
           class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>Services</span>
           <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
         </a>
         <a
-          href="#"
+          href="#pricing"
           class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>Pricing</span>
           <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
         </a>
         <a
-          href="#"
+          href="#contact"
           class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>Contact</span>
           <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
@@ -96,7 +96,7 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#"
+              href="#contact"
               class="btn bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 border border-white/10 px-8 py-4 rounded-full font-medium text-lg cursor-pointer">
               <span>Book Appointment</span>
             </a>
@@ -113,13 +113,13 @@
           class="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-4 px-4">
           <div class="floating-card rounded-2xl p-4 text-center min-w-[120px]">
             <div class="count overflow-hidden text-2xl font-bold gradient-text">
-              999+
+              1000+
             </div>
             <div class="text-sm text-white/70">Pelanggan Senang</div>
           </div>
           <div class="floating-card rounded-2xl p-4 text-center min-w-[120px]">
             <div class="count overflow-hidden text-2xl font-bold gradient-text">
-              99+
+              17+
             </div>
             <div class="text-sm text-white/70">Tahun Pengalaman</div>
           </div>
@@ -127,6 +127,7 @@
       </section>
 
       <section
+        id="overview"
         class="py-20 z-10 px-4 bg-gradient-to-b from-quaternary to-[#1a0e1d] flex justify-center items-center">
         <div
           class="w-full flex flex-col items-center jusctify-center mx-auto gap-16">
@@ -153,7 +154,9 @@
               <div class="font-semibold text-white mb-1">
                 Tenaga Profesional
               </div>
-              <p class="text-sm text-white/70">Lorem ipsum dolor sit amet.</p>
+              <p class="text-sm text-white/70">
+                Tenaga profesional yang bersertifikasi.
+              </p>
             </div>
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
@@ -165,18 +168,43 @@
                 Kami hanya menggunakan produk berkualitas tinggi.
               </p>
             </div>
+            <div
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <img src="./assets/images/icons/customer.svg" class="w-10" />
+              </div>
+              <div class="font-semibold text-white mb-1">Layanan Terbaik</div>
+              <p class="text-sm text-white/70">
+                Kami memberikan layanan terbaik kepada pelanggan kami.
+              </p>
+            </div>
+            <div
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <img src="./assets/images/icons/speed.svg" class="w-10" />
+              </div>
+              <div class="font-semibold text-white mb-1">Pelayanan Cepat</div>
+              <p class="text-sm text-white/70">
+                Kami memberikan pelayanan cepat kepada pelanggan kami.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section
+        id="services"
         class="py-20 z-10 px-4 bg-gradient-to-t from-quaternary to-[#1a0e1d] flex justify-center items-center">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-16">
-            <h2 class="text-5xl font-playfair font-bold mb-6 gradient-text">
+            <h2
+              id="services-title"
+              class="text-5xl overflow-hidden font-playfair font-bold mb-6 gradient-text">
               Layanan Kami
             </h2>
-            <p class="text-xl text-white/80 max-w-3xl mx-auto">
+            <p
+              id="services-subtitle"
+              class="text-xl overflow-hidden text-white/80 max-w-3xl mx-auto">
               Dari perawatan wajah hingga body treatment, kami menyediakan
               berbagai layanan kecantikan dengan kualitas terbaik.
             </p>
@@ -241,13 +269,17 @@
         </div>
       </section>
 
-      <section class="z-10 py-20 px-4">
+      <section id="pricing" class="z-10 py-20 px-4">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-16">
-            <h2 class="text-5xl font-playfair font-bold mb-6 gradient-text">
+            <h2
+              id="pricing-title"
+              class="overflow-hidden text-5xl font-playfair font-bold mb-6 gradient-text">
               Paket Treatment
             </h2>
-            <p class="text-xl text-white/80">
+            <p
+              id="pricing-subtitle"
+              class="text-xl overflow-hidden text-white/80">
               Pilih paket yang sesuai dengan kebutuhan kecantikan Anda
             </p>
           </div>
@@ -347,13 +379,17 @@
         </div>
       </section>
 
-      <section class="z-10 py-20 px-4">
+      <section id="contact" class="z-10 py-20 px-4">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-16">
-            <h2 class="text-5xl font-playfair font-bold mb-6 gradient-text">
+            <h2
+              id="contact-title"
+              class="text-5xl overflow-hidden font-playfair font-bold mb-6 gradient-text">
               Hubungi Kami
             </h2>
-            <p class="text-xl text-white/80">
+            <p
+              id="contact-subtitle"
+              class="text-xl overflow-hidden text-white/80">
               Siap melayani Anda dengan appointment system yang mudah dan
               fleksibel
             </p>
@@ -551,7 +587,8 @@
 
             <div class="space-y-3 font-inter">
               <p class="text-white/90 text-base md:text-lg">
-                Ini.. apa itu? oh GTP. Sama ini, Cilangkap. Di Depok klo gak salah
+                Ini.. apa itu? oh GTP. Sama ini, Cilangkap. Di Depok klo gak
+                salah
               </p>
               <p class="text-white/90 text-base md:text-lg">
                 Telp: +62 812 3456 7890 | Email: info@dtbeauty.com
