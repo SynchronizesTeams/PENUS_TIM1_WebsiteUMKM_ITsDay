@@ -77,8 +77,13 @@
       <section
         class="relative z-10 min-h-screen h-[105vh] flex items-center justify-center text-center rounded-b-3xl border border-white/20 text-white overflow-hidden">
         <div class="absolute inset-0 z-0">
-          <video autoplay muted loop class="w-full h-full object-cover">
-            <source src="./assets/videos/output2.webm" preload="none" playsinline autoplay type="video/mp4" />
+          <video
+            preload="auto"
+            autoplay
+            muted
+            loop
+            class="w-full h-full object-cover">
+            <source src="./assets/videos/output.webm" type="video/mp4" />
           </video>
           <div class="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
         </div>
@@ -149,7 +154,10 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img src="./assets/images/icons/human.svg" class="w-10" />
+                <img
+                  loading="lazy"
+                  src="./assets/images/icons/human.svg"
+                  class="w-10" />
               </div>
               <div class="font-semibold text-white mb-1">
                 Tenaga Profesional
@@ -161,7 +169,10 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img src="./assets/images/icons/premium.svg" class="w-10" />
+                <img
+                  loading="lazy"
+                  src="./assets/images/icons/premium.svg"
+                  class="w-10" />
               </div>
               <div class="font-semibold text-white mb-1">Produk Premium</div>
               <p class="text-sm text-white/70">
@@ -171,7 +182,10 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img src="./assets/images/icons/customer.svg" class="w-10" />
+                <img
+                  loading="lazy"
+                  src="./assets/images/icons/customer.svg"
+                  class="w-10" />
               </div>
               <div class="font-semibold text-white mb-1">Layanan Terbaik</div>
               <p class="text-sm text-white/70">
@@ -181,7 +195,10 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img src="./assets/images/icons/speed.svg" class="w-10" />
+                <img
+                  loading="lazy"
+                  src="./assets/images/icons/speed.svg"
+                  class="w-10" />
               </div>
               <div class="font-semibold text-white mb-1">Pelayanan Cepat</div>
               <p class="text-sm text-white/70">
@@ -584,13 +601,17 @@ Rp. 35.0000
       <div
         class="language-selector flex items-center space-x-2 bg-white/10 border border-white/20 transition-all duration-300 hover:bg-white/30 hover:border-white/30 backdrop-blur-md px-4 py-2 rounded-r-full cursor-pointer">
         <span class="text-sm">Indonesia</span>
-        <img src="./assets/images/icons/chevron-down.svg" class="w-5" />
+        <img
+          loading="lazy"
+          src="./assets/images/icons/chevron-down.svg"
+          class="w-5" />
       </div>
     </div>
 
     <footer class="z-10 relative w-full h-screen overflow-hidden">
       <div class="absolute inset-0 w-full h-full">
         <img
+          loading="lazy"
           src="./assets/videos/footer.svg"
           alt="Footer Background"
           class="w-full h-full object-cover" />
