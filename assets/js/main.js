@@ -250,3 +250,17 @@ document.addEventListener("click", (e) => {
 });
 
 initHoverEffects();
+
+document.querySelectorAll(".count").forEach((counter) => {
+  let target = +counter.dataset.target;
+  let obj = { val: 0 };
+
+  gsap.to(obj, {
+    val: target,
+    duration: 2,
+    ease: "power1.out",
+    onUpdate: () => {
+      counter.textContent = Math.floor(obj.val) + "+";
+    },
+  });
+});
