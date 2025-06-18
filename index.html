@@ -79,7 +79,7 @@
             muted
             loop
             class="w-full h-full object-cover">
-            <source src="./assets/videos/output.webm" type="video/webm" />
+            <source src="./assets/videos/background.webm" type="video/webm" />
           </video>
           <div class="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
         </div>
@@ -95,7 +95,7 @@
             class="text-lg md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-white/90 hero-subtitle">
             Percayakan perawatan harianmu pada tangan ahli kami.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <div class="flex gap-4 justify-center">
             <a
               href="#contact"
               class="btn bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 border border-white/10 px-8 py-4 rounded-full font-medium text-lg cursor-pointer">
@@ -139,12 +139,12 @@
           <div class="flex flex-col items-center justify-center w-full">
             <h2
               id="overview-title"
-              class="text-5xl text-center w-2/3 font-playfair font-bold mb-6 gradient-text relative overflow-hidden">
+              class="text-5xl text-center w-full md:w-3/4 font-playfair font-bold mb-6 gradient-text relative overflow-hidden">
               Pengalaman kecantikan terbaik untuk setiap pelanggan.
             </h2>
             <p
               id="overview-subtitle"
-              class="text-lg w-1/2 text-center text-white/80 mb-6 leading-relaxed relative overflow-hidden">
+              class="text-lg w-full md:w-1/2 text-center text-white/80 mb-6 leading-relaxed relative overflow-hidden">
               Kami berkomitmen untuk memberikan hasil terbaik dalam setiap
               layanan—dari rambut hingga ujung kaki.
             </p>
@@ -228,58 +228,50 @@
           </div>
 
           <div class="grid grid-cols-3 gap-6">
-            <div class="card">
-              <div
-                class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
-                <div>
-                  <div
-                    class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <img src="./assets/images/icons/face.svg" class="w-10" />
-                  </div>
-                  <h3 class="text-2xl font-semibold mb-4">Facial Treatment</h3>
-                  <p class="text-white/70 mb-6">
-                    Perawatan wajah profesional dengan produk premium untuk
-                    kulit sehat dan berseri.
-                  </p>
+            <div
+              class="glass-card layanan-card">
+              <div>
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <img src="./assets/images/icons/face.svg" class="w-10" />
                 </div>
+                <h3 class="text-2xl font-semibold mb-4">Facial Treatment</h3>
+                <p class="text-white/70 mb-6">
+                  Perawatan wajah profesional dengan produk premium untuk kulit
+                  sehat dan berseri.
+                </p>
               </div>
             </div>
 
-            <div class="card">
-              <div
-                class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
-                <div>
-                  <div
-                    class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <img
-                      src="./assets/images/icons/scissors.svg"
-                      class="w-10" />
-                  </div>
-                  <h3 class="text-2xl font-semibold mb-4">Hair Styling</h3>
-                  <p class="text-white/70 mb-6">
-                    Styling dan potong rambut dengan teknik modern dan produk
-                    profesional.
-                  </p>
+            <div
+              class="glass-card layanan-card">
+              <div>
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <img src="./assets/images/icons/scissors.svg" class="w-10" />
                 </div>
+                <h3 class="text-2xl font-semibold mb-4">Hair Styling</h3>
+                <p class="text-white/70 mb-6">
+                  Styling dan potong rambut dengan teknik modern dan produk
+                  profesional.
+                </p>
               </div>
             </div>
 
-            <div class="card">
-              <div
-                class="glass-card p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px]">
-                <div>
-                  <div
-                    class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <img
-                      src="./assets/images/icons/face-round.svg"
-                      class="w-10" />
-                  </div>
-                  <h3 class="text-2xl font-semibold mb-4">Makeup Service</h3>
-                  <p class="text-white/70 mb-6">
-                    Makeup profesional untuk acara spesial dengan hasil yang
-                    tahan lama dan natural
-                  </p>
+            <div
+              class="glass-card layanan-card">
+              <div>
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <img
+                    src="./assets/images/icons/face-round.svg"
+                    class="w-10" />
                 </div>
+                <h3 class="text-2xl font-semibold mb-4">Makeup Service</h3>
+                <p class="text-white/70 mb-6">
+                  Makeup profesional untuk acara spesial dengan hasil yang tahan
+                  lama dan natural
+                </p>
               </div>
             </div>
           </div>
@@ -562,68 +554,16 @@
                         class="absolute mt-2 w-full bg-white/10 backdrop-blur-md border border-white/10 rounded-xl shadow-lg overflow-hidden hidden z-10">
                         <li
                           class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Hair Coloring
+                          Facial Treatment
                         </li>
                         <li
                           class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Toning
+                          Hair Styling
                         </li>
                         <li
                           class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Hair Root Coloring
+                          Makeup Service
                         </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          One Tone Coloring
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Balayage
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Hair Care
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Potong Rambut
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Cuci Rambut
-                        </li>
-                        <!-- <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Blow/Catok/Curly
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Hair Spa
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Hair Mask
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Face Treatment
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Facial Basic
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Facial Acne
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Facial Totok
-                        </li>
-                        <li
-                          class="px-6 py-3 text-white hover:bg-white/20 cursor-pointer">
-                          Gold Face Mask
-                        </li> -->
                       </ul>
                     </div>
                   </div>
