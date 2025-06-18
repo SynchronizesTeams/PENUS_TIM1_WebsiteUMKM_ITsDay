@@ -29,6 +29,10 @@ html {
   @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300;
 }
 
+.layanan-card {
+  @apply p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px];
+}
+
 .nav-scrolled {
   @apply backdrop-blur-md bg-white/10 border border-white/10 shadow-md;
 }
@@ -108,4 +112,76 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+#hero-title {
+  font-size: clamp(3rem, 7vw, 7rem);
+}
+
+#hero-subtitle {
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+#overview-title,
+#services-title,
+#pricing-title,
+#contact-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+#overview-subtitle,
+#services-subtitle,
+#pricing-subtitle,
+#contact-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+}
+
+.btn {
+  padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.125rem);
+}
+
+.floating-card .count {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.floating-card div:last-child {
+  font-size: clamp(
+    0.75rem,
+    1.5vw,
+    0.875rem
+  ); 
+}
+
+.card .font-semibold {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+}
+.card p.text-sm {
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+}
+.card img.w-10 {
+  width: clamp(2.5rem, 5vw, 3rem);
+  height: clamp(2.5rem, 5vw, 3rem);
+}
+
+.pricing-card li div p.font-semibold {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+.pricing-card li div p.text-white\/70 {
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+}
+
+#contact .floating-card h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+}
+#contact .floating-card p {
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+}
+#contact .floating-card img {
+  width: clamp(1.5rem, 3vw, 2rem);
+  height: clamp(1.5rem, 3vw, 2rem);
+}
+
+footer h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
 }
