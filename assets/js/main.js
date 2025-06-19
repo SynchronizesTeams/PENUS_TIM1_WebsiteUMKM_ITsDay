@@ -27,6 +27,11 @@ let cursorY = 0;
 let cursorInnerX = 0;
 let cursorInnerY = 0;
 
+function isMobile() {
+  const minWidth = 768;
+  return window.innerWidth < minWidth || screen.width < minWidth;
+}
+
 const text = new SplitText("#hero-title, #hero-subtitle", { type: "words" });
 gsap.fromTo(
   text.words,
@@ -186,48 +191,50 @@ window.addEventListener("scroll", () => {
   }
 });
 
-window.addEventListener("mousemove", (e) => {
-  const targetElement = e.target;
-  const isTargetLinkOrBtn = Boolean(
-    targetElement?.closest("a") || targetElement?.closest("button")
-  );
+if (!isMobile()) {
+  window.addEventListener("mousemove", (e) => {
+    const targetElement = e.target;
+    const isTargetLinkOrBtn = Boolean(
+      targetElement?.closest("a") || targetElement?.closest("button")
+    );
 
-  mouseX = e.clientX;
-  mouseY = e.clientY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 
-  gsap.to(gradientCursor, {
-    x: e.clientX,
-    y: e.clientY,
-    scale: isTargetLinkOrBtn ? 0.8 : 1,
-    duration: 0.3,
-    ease: "power2.out",
-  });
-  gsap.to(gradientCursorInner, {
-    x: e.clientX,
-    y: e.clientY,
-    scale: isTargetLinkOrBtn ? 0.5 : 1,
-    duration: 0.3,
-    ease: "power2.out",
-  });
-});
-
-gsap.ticker.add(() => {
-  cursorX += (mouseX - cursorX) * 0.05;
-  cursorY += (mouseY - cursorY) * 0.05;
-
-  cursorInnerX += (mouseX - cursorInnerX) * 0.15;
-  cursorInnerY += (mouseY - cursorInnerY) * 0.15;
-
-  gsap.set(gradientCursor, {
-    x: cursorX,
-    y: cursorY,
+    gsap.to(gradientCursor, {
+      x: e.clientX,
+      y: e.clientY,
+      scale: isTargetLinkOrBtn ? 0.8 : 1,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+    gsap.to(gradientCursorInner, {
+      x: e.clientX,
+      y: e.clientY,
+      scale: isTargetLinkOrBtn ? 0.5 : 1,
+      duration: 0.3,
+      ease: "power2.out",
+    });
   });
 
-  gsap.set(gradientCursorInner, {
-    x: cursorInnerX,
-    y: cursorInnerY,
+  gsap.ticker.add(() => {
+    cursorX += (mouseX - cursorX) * 0.05;
+    cursorY += (mouseY - cursorY) * 0.05;
+
+    cursorInnerX += (mouseX - cursorInnerX) * 0.15;
+    cursorInnerY += (mouseY - cursorInnerY) * 0.15;
+
+    gsap.set(gradientCursor, {
+      x: cursorX,
+      y: cursorY,
+    });
+
+    gsap.set(gradientCursorInner, {
+      x: cursorInnerX,
+      y: cursorInnerY,
+    });
   });
-});
+}
 
 const dropdownBtn = document.getElementById("dropdownButton");
 const dropdownList = document.getElementById("dropdownList");
