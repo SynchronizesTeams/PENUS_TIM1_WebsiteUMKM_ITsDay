@@ -45,43 +45,6 @@ html {
   @apply inline-block;
 }
 
-.gradient-cursor {
-  position: fixed;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(191, 64, 173, 0.15) 0%,
-    rgba(172, 23, 148, 0.1) 30%,
-    rgba(157, 11, 133, 0.08) 50%,
-    rgba(102, 2, 55, 0.05) 70%,
-    transparent 100%
-  );
-  pointer-events: none;
-  z-index: 1;
-  mix-blend-mode: screen;
-  transform: translate(-50%, -50%);
-}
-
-.gradient-cursor-inner {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(191, 64, 173, 0.3) 0%,
-    rgba(172, 23, 148, 0.2) 40%,
-    rgba(157, 11, 133, 0.1) 70%,
-    transparent 100%
-  );
-  pointer-events: none;
-  z-index: 2;
-  mix-blend-mode: screen;
-  transform: translate(-50%, -50%);
-}
-
 .btn {
   cursor: pointer;
 }
@@ -140,11 +103,7 @@ html {
 }
 
 .floating-card div:last-child {
-  font-size: clamp(
-    0.75rem,
-    1.5vw,
-    0.875rem
-  ); 
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
 }
 
 .card .font-semibold {
@@ -178,4 +137,43 @@ html {
 
 footer h2 {
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+@media (min-width: 768px) {
+  .gradient-cursor {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(191, 64, 173, 0.15) 0%,
+      rgba(172, 23, 148, 0.1) 30%,
+      rgba(157, 11, 133, 0.08) 50%,
+      rgba(102, 2, 55, 0.05) 70%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+  }
+
+  .gradient-cursor-inner {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(191, 64, 173, 0.3) 0%,
+      rgba(172, 23, 148, 0.2) 40%,
+      rgba(157, 11, 133, 0.1) 70%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+  }
 }
