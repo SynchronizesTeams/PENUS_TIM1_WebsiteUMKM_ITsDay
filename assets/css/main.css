@@ -115,25 +115,19 @@ html {
 }
 
 #hero-title {
-  font-size: clamp(3rem, 7vw, 7rem);
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
 }
 
 #hero-subtitle {
-  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
-#overview-title,
-#services-title,
-#pricing-title,
-#contact-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
-#overview-subtitle,
-#services-subtitle,
-#pricing-subtitle,
-#contact-subtitle {
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
+.section-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
 .btn {
@@ -142,7 +136,7 @@ html {
 }
 
 .floating-card .count {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
 }
 
 .floating-card div:last-child {
