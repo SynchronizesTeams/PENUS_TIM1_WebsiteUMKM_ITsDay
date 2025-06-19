@@ -45,43 +45,6 @@ html {
   @apply inline-block;
 }
 
-.gradient-cursor {
-  position: fixed;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(191, 64, 173, 0.15) 0%,
-    rgba(172, 23, 148, 0.1) 30%,
-    rgba(157, 11, 133, 0.08) 50%,
-    rgba(102, 2, 55, 0.05) 70%,
-    transparent 100%
-  );
-  pointer-events: none;
-  z-index: 1;
-  mix-blend-mode: screen;
-  transform: translate(-50%, -50%);
-}
-
-.gradient-cursor-inner {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(191, 64, 173, 0.3) 0%,
-    rgba(172, 23, 148, 0.2) 40%,
-    rgba(157, 11, 133, 0.1) 70%,
-    transparent 100%
-  );
-  pointer-events: none;
-  z-index: 2;
-  mix-blend-mode: screen;
-  transform: translate(-50%, -50%);
-}
-
 .btn {
   cursor: pointer;
 }
@@ -115,25 +78,19 @@ html {
 }
 
 #hero-title {
-  font-size: clamp(3rem, 7vw, 7rem);
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
 }
 
 #hero-subtitle {
-  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
-#overview-title,
-#services-title,
-#pricing-title,
-#contact-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
-#overview-subtitle,
-#services-subtitle,
-#pricing-subtitle,
-#contact-subtitle {
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
+.section-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
 .btn {
@@ -142,15 +99,11 @@ html {
 }
 
 .floating-card .count {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
 }
 
 .floating-card div:last-child {
-  font-size: clamp(
-    0.75rem,
-    1.5vw,
-    0.875rem
-  ); 
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
 }
 
 .card .font-semibold {
@@ -184,4 +137,43 @@ html {
 
 footer h2 {
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+@media (min-width: 768px) {
+  .gradient-cursor {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(191, 64, 173, 0.15) 0%,
+      rgba(172, 23, 148, 0.1) 30%,
+      rgba(157, 11, 133, 0.08) 50%,
+      rgba(102, 2, 55, 0.05) 70%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+  }
+
+  .gradient-cursor-inner {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(191, 64, 173, 0.3) 0%,
+      rgba(172, 23, 148, 0.2) 40%,
+      rgba(157, 11, 133, 0.1) 70%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+  }
 }
