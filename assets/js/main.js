@@ -289,3 +289,22 @@ if (toggleBtn && productGrid) {
     );
   });
 }
+
+
+const container = document.querySelector('.pricing-cards-container');
+const cards = gsap.utils.toArray('.pricing-cards-container > div');
+
+gsap.to(container, {
+  xPercent: -100 * (cards.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#pricing",
+    pin: true,
+    scrub: 1,
+    end: () => "+=" + container.scrollWidth,
+    invalidateOnRefresh: true
+  }
+});
+
+//lama bgt jir gua buatnya 
+// big thanksss ke ey ayy cukk
