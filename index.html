@@ -29,6 +29,7 @@
 
     <link rel="stylesheet" href="./assets/css/main.css" />
     <script src="./assets/js/main.js" type="module" defer></script>
+    <script src="https://unpkg.com/@iconify/iconify@2/dist/iconify.min.js"></script>
   </head>
 
   <body class="relative text-white bg-quaternary">
@@ -52,14 +53,14 @@
           <span>Services</span>
         </a>
         <a
-          href="#products"
-          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
-          <span>Products</span>
-        </a>
-        <a
           href="#pricing"
           class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>Pricing</span>
+        </a>
+        <a
+          href="#products"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
+          <span>Products</span>
         </a>
         <a
           href="#contact"
@@ -109,8 +110,10 @@
             <a
               href="#"
               class="btn bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/15 transition-all duration-300 px-8 py-4 rounded-full font-medium text-lg flex items-center justify-center space-x-2 hover:-translate-y-0.5 cursor-pointer">
-              <span>Lorem Ipsum</span>
-              <img src="./assets/images/icons/chevron-right.svg" class="w-5" />
+              <span>Our Products</span>
+              <span
+                class="iconify w-5 h-5"
+                data-icon="mdi:chevron-right"></span>
             </a>
           </div>
         </div>
@@ -140,7 +143,7 @@
         id="overview"
         class="py-20 z-10 px-4 bg-gradient-to-b from-quaternary to-[#1a0e1d] flex justify-center items-center">
         <div
-          class="w-full flex flex-col items-center jusctify-center mx-auto gap-16">
+          class="w-full flex flex-col items-center justify-center mx-auto gap-16">
           <div class="flex flex-col items-center justify-center w-full">
             <h2
               id="overview-title"
@@ -155,14 +158,13 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-2 gap-6">
+          <div class="grid grid-cols-2 gap-6 md:max-w-4/5">
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img
-                  loading="lazy"
-                  src="./assets/images/icons/human.svg"
-                  class="w-10" />
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:account-supervisor"></span>
               </div>
               <div class="font-semibold text-white mb-1">
                 Tenaga Profesional
@@ -174,10 +176,9 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img
-                  loading="lazy"
-                  src="./assets/images/icons/premium.svg"
-                  class="w-10" />
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:star-circle"></span>
               </div>
               <div class="font-semibold text-white mb-1">Produk Premium</div>
               <p class="text-sm text-white/70">
@@ -187,10 +188,9 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img
-                  loading="lazy"
-                  src="./assets/images/icons/customer.svg"
-                  class="w-10" />
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:face-agent"></span>
               </div>
               <div class="font-semibold text-white mb-1">Layanan Terbaik</div>
               <p class="text-sm text-white/70">
@@ -200,10 +200,9 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img
-                  loading="lazy"
-                  src="./assets/images/icons/speed.svg"
-                  class="w-10" />
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:speedometer"></span>
               </div>
               <div class="font-semibold text-white mb-1">Pelayanan Cepat</div>
               <p class="text-sm text-white/70">
@@ -217,67 +216,77 @@
       <section
         id="services"
         class="py-20 z-10 px-4 bg-gradient-to-t from-quaternary to-[#1a0e1d] flex justify-center items-center">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
+        <div
+          class="w-full flex flex-col items-center justify-center mx-auto gap-16">
+          <div class="flex flex-col items-center justify-center w-full">
             <h2
               id="services-title"
-              class="section-title text-5xl overflow-hidden font-playfair font-bold mb-6 gradient-text">
+              class="section-title text-5xl text-center w-full md:w-3/4 font-playfair font-bold mb-6 gradient-text relative overflow-hidden">
               Layanan Kami
             </h2>
             <p
               id="services-subtitle"
-              class="section-subtitle text-xl overflow-hidden text-white/80 max-w-3xl mx-auto">
+              class="section-subtitle text-lg w-full md:w-1/2 text-center text-white/80 mb-6 leading-relaxed relative overflow-hidden">
               Dari perawatan wajah hingga body treatment, kami menyediakan
               berbagai layanan kecantikan dengan kualitas terbaik.
             </p>
           </div>
 
-          <div class="grid grid-cols-3 gap-6">
+          <div class="grid grid-cols-2 gap-6 md:max-w-4/5">
             <div
-              class="glass-card layanan-card">
-              <div>
-                <div
-                  class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <img src="./assets/images/icons/face.svg" class="w-10" />
-                </div>
-                <h3 class="text-2xl font-semibold mb-4">Facial Treatment</h3>
-                <p class="text-white/70 mb-6">
-                  Perawatan wajah profesional dengan produk premium untuk kulit
-                  sehat dan berseri.
-                </p>
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:face-woman-outline"></span>
               </div>
+              <div class="font-semibold text-white mb-1">Facial Treatment</div>
+              <p class="text-sm text-white/70">
+                Perawatan wajah profesional dengan produk premium untuk kulit
+                sehat dan berseri.
+              </p>
             </div>
 
             <div
-              class="glass-card layanan-card">
-              <div>
-                <div
-                  class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <img src="./assets/images/icons/scissors.svg" class="w-10" />
-                </div>
-                <h3 class="text-2xl font-semibold mb-4">Hair Styling</h3>
-                <p class="text-white/70 mb-6">
-                  Styling dan potong rambut dengan teknik modern dan produk
-                  profesional.
-                </p>
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:hair-dryer"></span>
               </div>
+              <div class="font-semibold text-white mb-1">Hair Styling</div>
+              <p class="text-sm text-white/70">
+                Styling dan potong rambut dengan teknik modern dan produk
+                profesional.
+              </p>
             </div>
 
             <div
-              class="glass-card layanan-card">
-              <div>
-                <div
-                  class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <img
-                    src="./assets/images/icons/face-round.svg"
-                    class="w-10" />
-                </div>
-                <h3 class="text-2xl font-semibold mb-4">Makeup Service</h3>
-                <p class="text-white/70 mb-6">
-                  Makeup profesional untuk acara spesial dengan hasil yang tahan
-                  lama dan natural
-                </p>
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:palette-swatch-outline"></span>
               </div>
+              <div class="font-semibold text-white mb-1">Makeup Service</div>
+              <p class="text-sm text-white/70">
+                Makeup profesional untuk acara spesial dengan hasil yang tahan
+                lama dan natural.
+              </p>
+            </div>
+
+            <div
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:hand-heart"></span>
+              </div>
+              <div class="font-semibold text-white mb-1">Nail Care</div>
+              <p class="text-sm text-white/70">
+                Perawatan kuku menyeluruh dengan sentuhan profesional untuk
+                tampilan kuku yang bersih, sehat, dan menawan.
+              </p>
             </div>
           </div>
         </div>
@@ -309,28 +318,28 @@
               </div>
               <ul class="text-left space-y-3 mb-8">
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Toning</p>
                     <p class="text-white/70">Rp. 150.000 - 250.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Hair Root Coloring</p>
                     <p class="text-white/70">Rp. 150.000 - 250.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">One Tone Coloring</p>
                     <p class="text-white/70">Rp. 250.000 - 450.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Balayage</p>
                     <p class="text-white/70">Rp. 250.000 - 600.000</p>
@@ -355,35 +364,35 @@
               </div>
               <ul class="text-left space-y-3 mb-8">
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Potong Rambut</p>
                     <p class="text-white/70">Rp. 35.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Cuci Rambut</p>
                     <p class="text-white/70">Rp. 35.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Blow / Catok / Curly</p>
                     <p class="text-white/70">Rp. 50.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Hair Spa</p>
                     <p class="text-white/70">Rp. 60.000 - 75.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Hair Mask</p>
                     <p class="text-white/70">Rp. 60.000 - 85.000</p>
@@ -402,28 +411,28 @@
               </div>
               <ul class="text-left space-y-3 mb-8">
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Facial Basic</p>
                     <p class="text-white/70">Rp. 100.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Facial Acne</p>
                     <p class="text-white/70">Rp. 150.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Facial Totok</p>
                     <p class="text-white/70">Rp. 150.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Gold Face Mask</p>
                     <p class="text-white/70">Rp. 50.000</p>
@@ -436,8 +445,7 @@
       </section>
 
       <section id="products" class="z-10 py-20 px-4">
-        
-  <div class="max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto">
           <div class="text-center mb-16">
             <h2
               id="products-title"
@@ -451,27 +459,52 @@
             </p>
           </div>
 
+          <div
+            id="productGrid"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div
+              class="product p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 1
+            </div>
+            <div
+              class="product p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 2
+            </div>
+            <div
+              class="product p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 3
+            </div>
+            <div
+              class="product p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 4
+            </div>
 
-    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div
+              class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 5
+            </div>
+            <div
+              class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 6
+            </div>
+            <div
+              class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 7
+            </div>
+            <div
+              class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 8
+            </div>
+          </div>
 
-      <div class="product p-4 rounded-lg shadow border-primary/30 glass-card">Produk 1</div>
-      <div class="product p-4 rounded-lg shadow border-primary/30 glass-card">Produk 2</div>
-      <div class="product p-4 rounded-lg shadow border-primary/30 glass-card">Produk 3</div>
-      <div class="product p-4 rounded-lg shadow border-primary/30 glass-card">Produk 4</div>
-
-      <div class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">Produk 5</div>
-      <div class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">Produk 6</div>
-      <div class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">Produk 7</div>
-      <div class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">Produk 8</div>
-    </div>
-
-    <div class="mt-8 text-center">
-      <button id="ToggleBtn" class="bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer ">
-        Lihat Semua Produk
-      </button>
-    </div>
-    </div>
-  </div>
+          <div class="mt-8 text-center">
+            <button
+              id="ToggleBtn"
+              class="bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
+              Lihat Semua Produk
+            </button>
+          </div>
+        </div>
       </section>
 
       <section id="contact" class="z-10 py-20 px-4">
@@ -496,7 +529,9 @@
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <img src="./assets/images/icons/location.svg" class="w-8" />
+                  <span
+                    class="iconify text-white w-8 h-8"
+                    data-icon="mdi:map-marker"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Alamat</h3>
@@ -511,7 +546,9 @@
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <img src="./assets/images/icons/telephone.svg" class="w-8" />
+                  <span
+                    class="iconify text-white w-8 h-8"
+                    data-icon="mdi:phone"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Telepon</h3>
@@ -523,7 +560,9 @@
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <img src="./assets/images/icons/email.svg" class="w-8" />
+                  <span
+                    class="iconify text-white w-8 h-8"
+                    data-icon="mdi:email"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Email</h3>
@@ -536,7 +575,9 @@
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <img src="./assets/images/icons/clock.svg" class="w-8" />
+                  <span
+                    class="iconify text-white w-8 h-8"
+                    data-icon="mdi:clock-time-eight"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Jam Operasional</h3>
@@ -588,9 +629,9 @@
                         id="dropdownButton"
                         class="btn w-full px-6 py-3 text-left rounded-lg bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 flex justify-between items-center">
                         <span id="selectedOption">Pilih layanan</span>
-                        <img
-                          src="./assets/images/icons/chevron-down.svg"
-                          class="w-5" />
+                        <span
+                          class="iconify w-5 h-5"
+                          data-icon="mdi:chevron-down"></span>
                       </div>
 
                       <ul
@@ -647,10 +688,7 @@
       <div
         class="language-selector flex items-center space-x-2 bg-white/10 border border-white/20 transition-all duration-300 hover:bg-white/30 hover:border-white/30 backdrop-blur-md px-4 py-2 rounded-r-full cursor-pointer">
         <span class="text-sm">Indonesia</span>
-        <img
-          loading="lazy"
-          src="./assets/images/icons/chevron-down.svg"
-          class="w-5" />
+        <span class="iconify w-5 h-5" data-icon="mdi:chevron-down"></span>
       </div>
     </div>
 
