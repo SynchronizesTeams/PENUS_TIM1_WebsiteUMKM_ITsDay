@@ -53,14 +53,14 @@
           <span>Services</span>
         </a>
         <a
-          href="#products"
-          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
-          <span>Products</span>
-        </a>
-        <a
           href="#pricing"
           class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>Pricing</span>
+        </a>
+        <a
+          href="#products"
+          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
+          <span>Products</span>
         </a>
         <a
           href="#contact"
@@ -143,7 +143,7 @@
         id="overview"
         class="py-20 z-10 px-4 bg-gradient-to-b from-quaternary to-[#1a0e1d] flex justify-center items-center">
         <div
-          class="w-full flex flex-col items-center jusctify-center mx-auto gap-16">
+          class="w-full flex flex-col items-center justify-center mx-auto gap-16">
           <div class="flex flex-col items-center justify-center w-full">
             <h2
               id="overview-title"
@@ -158,7 +158,7 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-2 gap-6">
+          <div class="grid grid-cols-2 gap-6 md:max-w-4/5">
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
@@ -216,68 +216,77 @@
       <section
         id="services"
         class="py-20 z-10 px-4 bg-gradient-to-t from-quaternary to-[#1a0e1d] flex justify-center items-center">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
+        <div
+          class="w-full flex flex-col items-center justify-center mx-auto gap-16">
+          <div class="flex flex-col items-center justify-center w-full">
             <h2
               id="services-title"
-              class="section-title text-5xl overflow-hidden font-playfair font-bold mb-6 gradient-text">
+              class="section-title text-5xl text-center w-full md:w-3/4 font-playfair font-bold mb-6 gradient-text relative overflow-hidden">
               Layanan Kami
             </h2>
             <p
               id="services-subtitle"
-              class="section-subtitle text-xl overflow-hidden text-white/80 max-w-3xl mx-auto">
+              class="section-subtitle text-lg w-full md:w-1/2 text-center text-white/80 mb-6 leading-relaxed relative overflow-hidden">
               Dari perawatan wajah hingga body treatment, kami menyediakan
               berbagai layanan kecantikan dengan kualitas terbaik.
             </p>
           </div>
 
-          <div class="grid grid-cols-3 gap-6">
-            <div class="glass-card layanan-card">
-              <div>
-                <div
-                  class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span
-                    class="iconify text-white w-10 h-10"
-                    data-icon="mdi:face-woman-outline"></span>
-                </div>
-                <h3 class="text-2xl font-semibold mb-4">Facial Treatment</h3>
-                <p class="text-white/70 mb-6">
-                  Perawatan wajah profesional dengan produk premium untuk kulit
-                  sehat dan berseri.
-                </p>
+          <div class="grid grid-cols-2 gap-6 md:max-w-4/5">
+            <div
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:face-woman-outline"></span>
               </div>
+              <div class="font-semibold text-white mb-1">Facial Treatment</div>
+              <p class="text-sm text-white/70">
+                Perawatan wajah profesional dengan produk premium untuk kulit
+                sehat dan berseri.
+              </p>
             </div>
 
-            <div class="glass-card layanan-card">
-              <div>
-                <div
-                  class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span
-                    class="iconify text-white w-10 h-10"
-                    data-icon="mdi:hair-dryer"></span>
-                </div>
-                <h3 class="text-2xl font-semibold mb-4">Hair Styling</h3>
-                <p class="text-white/70 mb-6">
-                  Styling dan potong rambut dengan teknik modern dan produk
-                  profesional.
-                </p>
+            <div
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:hair-dryer"></span>
               </div>
+              <div class="font-semibold text-white mb-1">Hair Styling</div>
+              <p class="text-sm text-white/70">
+                Styling dan potong rambut dengan teknik modern dan produk
+                profesional.
+              </p>
             </div>
 
-            <div class="glass-card layanan-card">
-              <div>
-                <div
-                  class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span
-                    class="iconify text-white w-10 h-10"
-                    data-icon="mdi:palette-swatch-outline"></span>
-                </div>
-                <h3 class="text-2xl font-semibold mb-4">Makeup Service</h3>
-                <p class="text-white/70 mb-6">
-                  Makeup profesional untuk acara spesial dengan hasil yang tahan
-                  lama dan natural
-                </p>
+            <div
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:palette-swatch-outline"></span>
               </div>
+              <div class="font-semibold text-white mb-1">Makeup Service</div>
+              <p class="text-sm text-white/70">
+                Makeup profesional untuk acara spesial dengan hasil yang tahan
+                lama dan natural.
+              </p>
+            </div>
+
+            <div
+              class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
+              <div class="text-4xl mb-2">
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:hand-heart"></span>
+              </div>
+              <div class="font-semibold text-white mb-1">Nail Care</div>
+              <p class="text-sm text-white/70">
+                Perawatan kuku menyeluruh dengan sentuhan profesional untuk
+                tampilan kuku yang bersih, sehat, dan menawan.
+              </p>
             </div>
           </div>
         </div>
@@ -436,8 +445,7 @@
       </section>
 
       <section id="products" class="z-10 py-20 px-4">
-        
-  <div class="max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto">
           <div class="text-center mb-16">
             <h2
               id="products-title"
@@ -451,27 +459,52 @@
             </p>
           </div>
 
+          <div
+            id="productGrid"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div
+              class="product p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 1
+            </div>
+            <div
+              class="product p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 2
+            </div>
+            <div
+              class="product p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 3
+            </div>
+            <div
+              class="product p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 4
+            </div>
 
-    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div
+              class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 5
+            </div>
+            <div
+              class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 6
+            </div>
+            <div
+              class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 7
+            </div>
+            <div
+              class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">
+              Produk 8
+            </div>
+          </div>
 
-      <div class="product p-4 rounded-lg shadow border-primary/30 glass-card">Produk 1</div>
-      <div class="product p-4 rounded-lg shadow border-primary/30 glass-card">Produk 2</div>
-      <div class="product p-4 rounded-lg shadow border-primary/30 glass-card">Produk 3</div>
-      <div class="product p-4 rounded-lg shadow border-primary/30 glass-card">Produk 4</div>
-
-      <div class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">Produk 5</div>
-      <div class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">Produk 6</div>
-      <div class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">Produk 7</div>
-      <div class="product hidden p-4 rounded-lg shadow border-primary/30 glass-card">Produk 8</div>
-    </div>
-
-    <div class="mt-8 text-center">
-      <button id="ToggleBtn" class="bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer ">
-        Lihat Semua Produk
-      </button>
-    </div>
-    </div>
-  </div>
+          <div class="mt-8 text-center">
+            <button
+              id="ToggleBtn"
+              class="bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
+              Lihat Semua Produk
+            </button>
+          </div>
+        </div>
       </section>
 
       <section id="contact" class="z-10 py-20 px-4">
@@ -498,8 +531,7 @@
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
                   <span
                     class="iconify text-white w-8 h-8"
-                    data-icon="mdi:map-marker"
-                    style="font-size: 1.5rem"></span>
+                    data-icon="mdi:map-marker"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Alamat</h3>
@@ -516,8 +548,7 @@
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
                   <span
                     class="iconify text-white w-8 h-8"
-                    data-icon="mdi:phone"
-                    style="font-size: 1.5rem"></span>
+                    data-icon="mdi:phone"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Telepon</h3>
@@ -531,8 +562,7 @@
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
                   <span
                     class="iconify text-white w-8 h-8"
-                    data-icon="mdi:email"
-                    style="font-size: 1.5rem"></span>
+                    data-icon="mdi:email"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Email</h3>
@@ -547,8 +577,7 @@
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
                   <span
                     class="iconify text-white w-8 h-8"
-                    data-icon="mdi:clock-time-eight"
-                    style="font-size: 1.5rem"></span>
+                    data-icon="mdi:clock-time-eight"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Jam Operasional</h3>
