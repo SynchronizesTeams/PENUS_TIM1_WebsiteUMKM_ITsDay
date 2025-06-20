@@ -29,6 +29,7 @@
 
     <link rel="stylesheet" href="./assets/css/main.css" />
     <script src="./assets/js/main.js" type="module" defer></script>
+    <script src="https://unpkg.com/@iconify/iconify@2/dist/iconify.min.js"></script>
   </head>
 
   <body class="relative text-white bg-quaternary">
@@ -109,8 +110,10 @@
             <a
               href="#"
               class="btn bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/15 transition-all duration-300 px-8 py-4 rounded-full font-medium text-lg flex items-center justify-center space-x-2 hover:-translate-y-0.5 cursor-pointer">
-              <span>Lorem Ipsum</span>
-              <img src="./assets/images/icons/chevron-right.svg" class="w-5" />
+              <span>Our Products</span>
+              <span
+                class="iconify w-5 h-5"
+                data-icon="mdi:chevron-right"></span>
             </a>
           </div>
         </div>
@@ -159,10 +162,9 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img
-                  loading="lazy"
-                  src="./assets/images/icons/human.svg"
-                  class="w-10" />
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:account-supervisor"></span>
               </div>
               <div class="font-semibold text-white mb-1">
                 Tenaga Profesional
@@ -174,10 +176,9 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img
-                  loading="lazy"
-                  src="./assets/images/icons/premium.svg"
-                  class="w-10" />
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:star-circle"></span>
               </div>
               <div class="font-semibold text-white mb-1">Produk Premium</div>
               <p class="text-sm text-white/70">
@@ -187,10 +188,9 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img
-                  loading="lazy"
-                  src="./assets/images/icons/customer.svg"
-                  class="w-10" />
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:face-agent"></span>
               </div>
               <div class="font-semibold text-white mb-1">Layanan Terbaik</div>
               <p class="text-sm text-white/70">
@@ -200,10 +200,9 @@
             <div
               class="bg-white/10 card backdrop-blur-2xl p-5 rounded-xl floating-card">
               <div class="text-4xl mb-2">
-                <img
-                  loading="lazy"
-                  src="./assets/images/icons/speed.svg"
-                  class="w-10" />
+                <span
+                  class="iconify text-white w-10 h-10"
+                  data-icon="mdi:speedometer"></span>
               </div>
               <div class="font-semibold text-white mb-1">Pelayanan Cepat</div>
               <p class="text-sm text-white/70">
@@ -233,12 +232,13 @@
           </div>
 
           <div class="grid grid-cols-3 gap-6">
-            <div
-              class="glass-card layanan-card">
+            <div class="glass-card layanan-card">
               <div>
                 <div
                   class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <img src="./assets/images/icons/face.svg" class="w-10" />
+                  <span
+                    class="iconify text-white w-10 h-10"
+                    data-icon="mdi:face-woman-outline"></span>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Facial Treatment</h3>
                 <p class="text-white/70 mb-6">
@@ -248,12 +248,13 @@
               </div>
             </div>
 
-            <div
-              class="glass-card layanan-card">
+            <div class="glass-card layanan-card">
               <div>
                 <div
                   class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <img src="./assets/images/icons/scissors.svg" class="w-10" />
+                  <span
+                    class="iconify text-white w-10 h-10"
+                    data-icon="mdi:hair-dryer"></span>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Hair Styling</h3>
                 <p class="text-white/70 mb-6">
@@ -263,14 +264,13 @@
               </div>
             </div>
 
-            <div
-              class="glass-card layanan-card">
+            <div class="glass-card layanan-card">
               <div>
                 <div
                   class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <img
-                    src="./assets/images/icons/face-round.svg"
-                    class="w-10" />
+                  <span
+                    class="iconify text-white w-10 h-10"
+                    data-icon="mdi:palette-swatch-outline"></span>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Makeup Service</h3>
                 <p class="text-white/70 mb-6">
@@ -309,28 +309,28 @@
               </div>
               <ul class="text-left space-y-3 mb-8">
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Toning</p>
                     <p class="text-white/70">Rp. 150.000 - 250.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Hair Root Coloring</p>
                     <p class="text-white/70">Rp. 150.000 - 250.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">One Tone Coloring</p>
                     <p class="text-white/70">Rp. 250.000 - 450.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Balayage</p>
                     <p class="text-white/70">Rp. 250.000 - 600.000</p>
@@ -355,35 +355,35 @@
               </div>
               <ul class="text-left space-y-3 mb-8">
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Potong Rambut</p>
                     <p class="text-white/70">Rp. 35.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Cuci Rambut</p>
                     <p class="text-white/70">Rp. 35.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Blow / Catok / Curly</p>
                     <p class="text-white/70">Rp. 50.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Hair Spa</p>
                     <p class="text-white/70">Rp. 60.000 - 75.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Hair Mask</p>
                     <p class="text-white/70">Rp. 60.000 - 85.000</p>
@@ -402,28 +402,28 @@
               </div>
               <ul class="text-left space-y-3 mb-8">
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Facial Basic</p>
                     <p class="text-white/70">Rp. 100.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Facial Acne</p>
                     <p class="text-white/70">Rp. 150.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Facial Totok</p>
                     <p class="text-white/70">Rp. 150.000</p>
                   </div>
                 </li>
                 <li class="flex items-center">
-                  <img src="./assets/images/icons/check.svg" class="w-5 mr-2" />
+                  <span class="iconify w-5 h-5" data-icon="mdi:check"></span>
                   <div>
                     <p class="font-semibold">Gold Face Mask</p>
                     <p class="text-white/70">Rp. 50.000</p>
@@ -496,7 +496,10 @@
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <img src="./assets/images/icons/location.svg" class="w-8" />
+                  <span
+                    class="iconify text-white w-8 h-8"
+                    data-icon="mdi:map-marker"
+                    style="font-size: 1.5rem"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Alamat</h3>
@@ -511,7 +514,10 @@
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <img src="./assets/images/icons/telephone.svg" class="w-8" />
+                  <span
+                    class="iconify text-white w-8 h-8"
+                    data-icon="mdi:phone"
+                    style="font-size: 1.5rem"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Telepon</h3>
@@ -523,7 +529,10 @@
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <img src="./assets/images/icons/email.svg" class="w-8" />
+                  <span
+                    class="iconify text-white w-8 h-8"
+                    data-icon="mdi:email"
+                    style="font-size: 1.5rem"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Email</h3>
@@ -536,7 +545,10 @@
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
                   class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <img src="./assets/images/icons/clock.svg" class="w-8" />
+                  <span
+                    class="iconify text-white w-8 h-8"
+                    data-icon="mdi:clock-time-eight"
+                    style="font-size: 1.5rem"></span>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-1">Jam Operasional</h3>
@@ -588,9 +600,9 @@
                         id="dropdownButton"
                         class="btn w-full px-6 py-3 text-left rounded-lg bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 flex justify-between items-center">
                         <span id="selectedOption">Pilih layanan</span>
-                        <img
-                          src="./assets/images/icons/chevron-down.svg"
-                          class="w-5" />
+                        <span
+                          class="iconify w-5 h-5"
+                          data-icon="mdi:chevron-down"></span>
                       </div>
 
                       <ul
@@ -647,10 +659,7 @@
       <div
         class="language-selector flex items-center space-x-2 bg-white/10 border border-white/20 transition-all duration-300 hover:bg-white/30 hover:border-white/30 backdrop-blur-md px-4 py-2 rounded-r-full cursor-pointer">
         <span class="text-sm">Indonesia</span>
-        <img
-          loading="lazy"
-          src="./assets/images/icons/chevron-down.svg"
-          class="w-5" />
+        <span class="iconify w-5 h-5" data-icon="mdi:chevron-down"></span>
       </div>
     </div>
 

@@ -5,40 +5,38 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "lenis/dist/lenis.css";
 
+// Inisialisasi Lenis smooth scroll
 const lenis = new Lenis();
-
 gsap.registerPlugin(ScrollTrigger, SplitText);
-
 lenis.on("scroll", ScrollTrigger.update);
 
 gsap.ticker.add((time) => {
   lenis.raf(time * 1000);
 });
-
 gsap.ticker.lagSmoothing(0);
 
+// Cursor custom untuk desktop
 const gradientCursor = document.getElementById("gradientCursor");
 const gradientCursorInner = document.getElementById("gradientCursorInner");
 
-let mouseX = 0;
-let mouseY = 0;
-let cursorX = 0;
-let cursorY = 0;
-let cursorInnerX = 0;
-let cursorInnerY = 0;
+let mouseX = 0,
+  mouseY = 0;
+let cursorX = 0,
+  cursorY = 0;
+let cursorInnerX = 0,
+  cursorInnerY = 0;
 
 function isMobile() {
-  const minWidth = 768;
-  return window.innerWidth < minWidth || screen.width < minWidth;
+  return window.innerWidth < 768 || screen.width < 768;
 }
 
-const text = new SplitText("#hero-title, #hero-subtitle", { type: "words" });
+// Animasi teks hero
+const heroText = new SplitText("#hero-title, #hero-subtitle", {
+  type: "words",
+});
 gsap.fromTo(
-  text.words,
-  {
-    y: 100,
-    opacity: 0,
-  },
+  heroText.words,
+  { y: 100, opacity: 0 },
   {
     y: 0,
     opacity: 1,
@@ -48,24 +46,19 @@ gsap.fromTo(
   }
 );
 
+// Animasi section title & subtitle
 const sections = [
-  { title: "#overview-title", subtitle: "#overview-subtitle" },
-  { title: "#services-title", subtitle: "#services-subtitle" },
-  { title: "#products-title", subtitle: "#products-subtitle" },
-  { title: "#pricing-title", subtitle: "#pricing-subtitle" },
-  { title: "#contact-title", subtitle: "#contact-subtitle" },
+  "#overview-title, #overview-subtitle",
+  "#services-title, #services-subtitle",
+  "#pricing-title, #pricing-subtitle",
+  "#contact-title, #contact-subtitle",
 ];
 
-sections.forEach((section) => {
-  const targets = `${section.title}, ${section.subtitle}`;
-  const split = new SplitText(targets, { type: "words" });
-
+sections.forEach((selector) => {
+  const split = new SplitText(selector, { type: "words" });
   gsap.fromTo(
     split.words,
-    {
-      y: 100,
-      opacity: 0,
-    },
+    { y: 100, opacity: 0 },
     {
       y: 0,
       opacity: 1,
@@ -73,7 +66,7 @@ sections.forEach((section) => {
       stagger: 0.05,
       ease: "power4.out",
       scrollTrigger: {
-        trigger: section.title,
+        trigger: selector.split(",")[0],
         start: "top 85%",
         end: "bottom center",
         toggleActions: "play none none reverse",
@@ -82,38 +75,35 @@ sections.forEach((section) => {
   );
 });
 
+// Animasi card
 document.querySelectorAll(".card").forEach((card, i) => {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: card,
-        start: "top 80%",
-        toggleActions: "play none none reverse",
-      },
-    })
-    .from(card, {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      delay: i * 0.15,
-      ease: "power2.out",
-    });
+  gsap.from(card, {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    delay: i * 0.15,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
 });
 
+// Hover text animation
 function initHoverEffects() {
-  const hoverElements = document.querySelectorAll(".hover-rotate-text");
-
-  hoverElements.forEach((element) => {
+  document.querySelectorAll(".hover-rotate-text").forEach((element) => {
     const original = element.querySelector("span");
     const clone = original.cloneNode(true);
     element.appendChild(clone);
-
     gsap.set(clone, { position: "absolute", top: 0, left: 0 });
 
-    const originalSplit = SplitText.create(original, { type: "chars" });
-    const cloneSplit = SplitText.create(clone, { type: "chars" });
-
-    gsap.set(cloneSplit.chars, {
+    const [oSplit, cSplit] = [
+      new SplitText(original, { type: "chars" }),
+      new SplitText(clone, { type: "chars" }),
+    ];
+    gsap.set(cSplit.chars, {
       rotationX: -20,
       opacity: 0,
       transformOrigin: "50% 50% -50",
@@ -124,54 +114,27 @@ function initHoverEffects() {
 
     const tl = gsap.timeline({ paused: true });
 
-    tl.to(originalSplit.chars, {
-      duration: duration,
+    tl.to(oSplit.chars, {
+      duration,
       rotationX: 30,
       transformOrigin: "50% 50% -50",
-      stagger: stagger,
+      stagger,
     });
-
     tl.to(
-      originalSplit.chars,
-      {
-        duration: duration,
-        opacity: 0,
-        stagger: stagger,
-        ease: "power4.in",
-      },
+      oSplit.chars,
+      { duration, opacity: 0, stagger: stagger, ease: "power4.in" },
       0
     );
+    tl.to(cSplit.chars, { duration: 0.05, opacity: 1, stagger }, 0.001);
+    tl.to(cSplit.chars, { duration, rotationX: 0, stagger }, 0);
 
-    tl.to(
-      cloneSplit.chars,
-      {
-        duration: 0.05,
-        opacity: 1,
-        stagger: stagger,
-      },
-      0.001
-    );
-
-    tl.to(
-      cloneSplit.chars,
-      {
-        duration: duration,
-        rotationX: 0,
-        stagger: stagger,
-      },
-      0
-    );
-
-    element.addEventListener("mouseenter", () => {
-      tl.restart();
-    });
-
-    element.addEventListener("mouseleave", () => {
-      tl.reverse();
-    });
+    element.addEventListener("mouseenter", () => tl.restart());
+    element.addEventListener("mouseleave", () => tl.reverse());
   });
 }
+initHoverEffects();
 
+// Navbar shadow on scroll
 window.addEventListener("scroll", () => {
   const navbar = document.getElementById("navbar");
   if (window.scrollY > 5) {
@@ -191,51 +154,46 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Custom cursor (desktop only)
 if (!isMobile()) {
   window.addEventListener("mousemove", (e) => {
-    const targetElement = e.target;
-    const isTargetLinkOrBtn = Boolean(
-      targetElement?.closest("a") || targetElement?.closest("button")
+    const target = e.target;
+    const isLinkOrBtn = Boolean(
+      target.closest("a") || target.closest("button")
     );
 
     mouseX = e.clientX;
     mouseY = e.clientY;
 
     gsap.to(gradientCursor, {
-      x: e.clientX,
-      y: e.clientY,
-      scale: isTargetLinkOrBtn ? 0.8 : 1,
+      x: mouseX,
+      y: mouseY,
+      scale: isLinkOrBtn ? 0.8 : 1,
       duration: 0.3,
       ease: "power2.out",
     });
     gsap.to(gradientCursorInner, {
-      x: e.clientX,
-      y: e.clientY,
-      scale: isTargetLinkOrBtn ? 0.5 : 1,
+      x: mouseX,
+      y: mouseY,
+      scale: isLinkOrBtn ? 0.5 : 1,
       duration: 0.3,
       ease: "power2.out",
     });
   });
 
+  // Smooth follow
   gsap.ticker.add(() => {
     cursorX += (mouseX - cursorX) * 0.05;
     cursorY += (mouseY - cursorY) * 0.05;
-
     cursorInnerX += (mouseX - cursorInnerX) * 0.15;
     cursorInnerY += (mouseY - cursorInnerY) * 0.15;
 
-    gsap.set(gradientCursor, {
-      x: cursorX,
-      y: cursorY,
-    });
-
-    gsap.set(gradientCursorInner, {
-      x: cursorInnerX,
-      y: cursorInnerY,
-    });
+    gsap.set(gradientCursor, { x: cursorX, y: cursorY });
+    gsap.set(gradientCursorInner, { x: cursorInnerX, y: cursorInnerY });
   });
 }
 
+// Dropdown logic
 const dropdownBtn = document.getElementById("dropdownButton");
 const dropdownList = document.getElementById("dropdownList");
 const selectedOption = document.getElementById("selectedOption");
@@ -257,91 +215,77 @@ document.addEventListener("click", (e) => {
   }
 });
 
-initHoverEffects();
-
+// Counter animations
 document.querySelectorAll(".count").forEach((counter) => {
-  let target = +counter.dataset.target;
-  let obj = { val: 0 };
-
+  const target = +counter.dataset.target;
+  const obj = { val: 0 };
   gsap.to(obj, {
     val: target,
     duration: 2,
     ease: "power1.out",
-    onUpdate: () => {
-      counter.textContent = Math.floor(obj.val) + "+";
-    },
+    onUpdate: () => (counter.textContent = Math.floor(obj.val) + "+"),
   });
 });
 
+// Toggle produk (jika ada bagian produk)
 const toggleBtn = document.getElementById("ToggleBtn");
-    const productGrid = document.getElementById("productGrid");
-    const hiddenProducts = productGrid.querySelectorAll(".product:nth-child(n+5)");
-    let isExpanded = false;
+const productGrid = document.getElementById("productGrid");
+if (toggleBtn && productGrid) {
+  const hiddenProducts = [
+    ...productGrid.querySelectorAll(".product:nth-child(n+5)"),
+  ];
+  let isExpanded = false;
 
-    toggleBtn.addEventListener("click", () => {
-      toggleBtn.disabled = true;
-
-      const tl = gsap.timeline({
-        onComplete: () => toggleBtn.disabled = false
-      });
-
-      tl.to(toggleBtn, { opacity: 0, scale: 0.9, duration: 0.3, ease: "power1.in" });
-
-      if (!isExpanded) {
-        hiddenProducts.forEach((product, index) => {
-          product.classList.remove("hidden"); 
-          tl.fromTo(product,
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
-            0.05 
-          );
-        });
-      } else {
-  
-        hiddenProducts.forEach((product, index) => {
-          tl.to(product,
-            {
-              opacity: 0, y: 50, duration: 0.3, ease: "power1.in",
-              onComplete: () => product.classList.add("hidden")
-            },
-            0.05
-          );
-        });
-      }
-
-      
-      tl.add(() => {
-        toggleBtn.textContent = isExpanded
-          ? "Lihat Semua Produk"
-          : "Tampilkan Lebih Sedikit";
-        isExpanded = !isExpanded;
-      });
-
-      tl.to(toggleBtn, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)" }, "+=0.1");
+  toggleBtn.addEventListener("click", () => {
+    toggleBtn.disabled = true;
+    const tl = gsap.timeline({
+      onComplete: () => (toggleBtn.disabled = false),
     });
-// showMoreBtn.addEventListener("click", () => {
-//   hiddenProducts.forEach((product, index) => {
-//     product.classList.remove("hidden");
 
-//   });
+    tl.to(toggleBtn, {
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.3,
+      ease: "power1.in",
+    });
 
-//   showMoreBtn.classList.add("hidden");
-//   showLessBtn.classList.remove("hidden");
-// });
+    if (!isExpanded) {
+      hiddenProducts.forEach((product, index) => {
+        product.classList.remove("hidden");
+        tl.fromTo(
+          product,
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+          0.05
+        );
+      });
+    } else {
+      hiddenProducts.forEach((product, index) => {
+        tl.to(
+          product,
+          {
+            opacity: 0,
+            y: 50,
+            duration: 0.3,
+            ease: "power1.in",
+            onComplete: () => product.classList.add("hidden"),
+          },
+          0.05
+        );
+      });
+    }
 
-// showLessBtn.addEventListener("click", () => {
-//   hiddenProducts.forEach((product, index) => {
-//     gsap.to(product, {
-//       opacity: 0,
-//       y: 50,
-//       duration: 0.4,
-//       delay: index * 0.05,
-//       ease: "power1.in",
-//       onComplete: () => product.classList.add("hidden")
-//     });
-//   });
+    tl.add(() => {
+      toggleBtn.textContent = isExpanded
+        ? "Lihat Semua Produk"
+        : "Tampilkan Lebih Sedikit";
+      isExpanded = !isExpanded;
+    });
 
-//   showMoreBtn.classList.remove("hidden");
-//   showLessBtn.classList.add("hidden");})
-
-// aaaaa memememememekk emememek
+    tl.to(
+      toggleBtn,
+      { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)" },
+      "+=0.1"
+    );
+  });
+}
