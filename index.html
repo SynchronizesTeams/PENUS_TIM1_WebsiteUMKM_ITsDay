@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -48,11 +47,6 @@
           <span>Overview</span>
         </a>
         <a
-          href="#services"
-          class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
-          <span>Services</span>
-        </a>
-        <a
           href="#pricing"
           class="nav-item hover-rotate-text cursor-pointer flex items-center space-x-1">
           <span>Pricing</span>
@@ -77,7 +71,7 @@
 
     <main class="">
       <section
-        class="relative z-10 min-h-screen h-[105vh] flex items-center justify-center text-center rounded-b-3xl border border-white/20 text-white overflow-hidden">
+        class="relative z-10 h-[105vh] flex flex-col items-center justify-center text-center rounded-b-3xl border border-white/20 text-white overflow-hidden">
         <div class="absolute inset-0 z-0">
           <video
             preload="auto"
@@ -119,8 +113,8 @@
         </div>
 
         <div
-          class="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-4 px-4">
-          <div class="floating-card rounded-2xl p-4 text-center min-w-[120px]">
+          class="absolute bottom-25 left-1/2 -translate-x-1/2 flex items-center justify-center gap-4">
+          <div class="count-container p-4 text-center min-w-44">
             <div
               class="count overflow-hidden text-2xl font-bold gradient-text"
               data-target="1000">
@@ -128,7 +122,7 @@
             </div>
             <div class="text-sm text-white/70">Pelanggan Senang</div>
           </div>
-          <div class="floating-card rounded-2xl p-4 text-center min-w-[120px]">
+          <div class="count-container p-4 text-center min-w-44">
             <div
               class="count overflow-hidden text-2xl font-bold gradient-text"
               data-target="17">
@@ -213,201 +207,291 @@
         </div>
       </section>
 
-    <section id="pricing" class="pricing-section relative overflow-hidden min-h-screen">
+      <section
+        id="pricing"
+        class="pricing-section relative overflow-hidden min-h-screen bg-gradient-to-t from-quaternary to-[#1a0e1d]">
         <div class="pricing-cards-container flex items-center">
-            
-            <div class="min-w-screen h-screen flex items-center justify-center px-8">
-                <div class="text-center max-w-4xl">
-                    <h2 class="text-6xl md:text-8xl font-playfair font-bold mb-8 gradient-text" id="pricing-title">
-                        List Treatment
-                    </h2>
-                    <p class="text-2xl text-white/80 mb-12" id="pricing-subtitle">
-                        Pilih treatment yang sesuai dengan kebutuhan kecantihan Anda
+          <div
+            class="min-w-screen h-screen flex items-center justify-center px-8">
+            <div class="text-center max-w-4xl">
+              <h2
+                class="text-6xl md:text-8xl font-playfair font-bold mb-8 gradient-text"
+                id="pricing-title">
+                List Treatment
+              </h2>
+              <p class="text-2xl text-white/80 mb-12" id="pricing-subtitle">
+                Pilih treatment yang sesuai dengan kebutuhan kecantikan Anda
+              </p>
+              <div
+                class="flex items-center justify-center space-x-4 text-white/60">
+                <span
+                  class="iconify w-6 h-6"
+                  data-icon="mdi:chevron-left"></span>
+                <span>Scroll untuk melihat pricing</span>
+                <span
+                  class="iconify w-6 h-6"
+                  data-icon="mdi:chevron-right"></span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-screen h-screen flex flex-col items-center justify-center px-8">
+            <div
+              class="glass-card rounded-2xl p-6 max-w-sm w-full text-center border-2 border-pink-400/30">
+              <div class="mb-6">
+                <span
+                  class="iconify w-8 h-8 text-senary mb-4 block mx-auto"
+                  data-icon="mdi:palette-swatch"></span>
+                <h3 class="text-2xl font-playfair font-bold mb-3">
+                  Hair Coloring
+                </h3>
+                <div class="text-xl font-bold gradient-text mb-3">
+                  Start From Rp 150.000
+                </div>
+              </div>
+              <ul class="text-left space-y-2 mb-6">
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Toning</p>
+                    <p class="text-white/70 text-xs">
+                      Professional hair toning
                     </p>
-                    <div class="flex items-center justify-center space-x-4 text-white/60">
-                        <span class="iconify w-6 h-6" data-icon="mdi:chevron-left"></span>
-                        <span>Scroll untuk melihat pricing</span>
-                        <span class="iconify w-6 h-6" data-icon="mdi:chevron-right"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="min-w-screen h-screen flex items-center justify-center px-8">
-                <div class="glass-card rounded-2xl p-6 max-w-sm w-full text-center border-2 border-pink-400/30">
-                    <div class="mb-6">
-                        <span class="iconify w-8 h-8 text-senary mb-4 block mx-auto" data-icon="mdi:palette-swatch"></span>
-                        <h3 class="text-2xl font-playfair font-bold mb-3">Hair Coloring</h3>
-                        <div class="text-xl font-bold gradient-text mb-3">
-                            Start From Rp 150.000
-                        </div>
-                    </div>
-                    <ul class="text-left space-y-2 mb-6">
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Toning</p>
-                                <p class="text-white/70 text-xs">Professional hair toning</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 150k - 250k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Hair Root Coloring</p>
-                                <p class="text-white/70 text-xs">Root touch up service</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 150k - 250k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">One Tone Coloring</p>
-                                <p class="text-white/70 text-xs">Full hair coloring</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 250k - 450k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Balayage</p>
-                                <p class="text-white/70 text-xs">Premium balayage technique</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 250k - 600k</span>
-                        </li>
-                    </ul>
-                    <a href="#contact">
-                      <button class="w-full bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
-                          Book Now
-                      </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="min-w-screen h-screen flex items-center justify-center px-8">
-                <div class="glass-card rounded-2xl p-6 max-w-sm w-full text-center border-2 border-senary relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <span class="bg-gradient-to-r from-senary to-primary px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                            Most Popular
-                        </span>
-                    </div>
-                    <div class="mb-6 pt-3">
-                        <span class="iconify w-12 h-12 text-senary mb-4 block mx-auto" data-icon="mdi:hair-dryer"></span>
-                        <h3 class="text-2xl font-playfair font-bold mb-3">Hair Care</h3>
-                        <div class="text-xl font-bold gradient-text mb-3">
-                            Start From Rp 35.000
-                        </div>
-                    </div>
-                    <ul class="text-left space-y-2 mb-6">
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Potong Rambut</p>
-                                <p class="text-white/70 text-xs">Professional haircut</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 35k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Cuci Rambut</p>
-                                <p class="text-white/70 text-xs">Hair wash service</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 35k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Blow / Catok / Curly</p>
-                                <p class="text-white/70 text-xs">Hair styling options</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 50k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Hair Spa</p>
-                                <p class="text-white/70 text-xs">Relaxing hair treatment</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 60k - 75k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Hair Mask</p>
-                                <p class="text-white/70 text-xs">Nourishing hair mask</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 60k - 85k</span>
-                        </li>
-                    </ul>
-                    <a href="#contact">
-                      <button class="w-full bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
-                          Book Now
-                      </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="min-w-screen h-screen flex items-center justify-center px-8">
-                <div class="glass-card rounded-2xl p-6 max-w-sm w-full text-center border-2 border-pink-400/30">
-                    <div class="mb-6">
-                        <span class="iconify w-12 h-12 text-senary mb-4 block mx-auto" data-icon="mdi:face-woman-outline"></span>
-                        <h3 class="text-2xl font-playfair font-bold mb-3">Face Treatment</h3>
-                        <div class="text-xl font-bold gradient-text mb-3">
-                            Start From Rp 50.000
-                        </div>
-                    </div>
-                    <ul class="text-left space-y-2 mb-6">
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Facial Basic</p>
-                                <p class="text-white/70 text-xs">Basic facial cleansing</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 100k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Facial Acne</p>
-                                <p class="text-white/70 text-xs">Acne treatment facial</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 150k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Facial Totok</p>
-                                <p class="text-white/70 text-xs">Traditional facial massage</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 150k</span>
-                        </li>
-                        <li class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
-                            <div>
-                                <p class="font-semibold text-sm">Gold Face Mask</p>
-                                <p class="text-white/70 text-xs">Luxury gold mask treatment</p>
-                            </div>
-                            <span class="text-senary font-bold text-sm">Rp 50k</span>
-                        </li>
-                    </ul>
-                    <a href="#contact">
-                      <button class="w-full bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
-                          Book Now
-                      </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="min-w-screen h-screen flex items-center justify-center px-8">
-                <div class="text-center max-w-4xl">
-                    <h2 class="text-6xl md:text-8xl font-playfair font-bold mb-8 gradient-text">
-                        Ready to Book?
-                    </h2>
-                    <p class="text-2xl text-white/80 mb-12">
-                        Hubungi kami sekarang untuk appointment
+                  </div>
+                  <span class="text-senary font-bold text-sm"
+                    >Rp 150k - 250k</span
+                  >
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Hair Root Coloring</p>
+                    <p class="text-white/70 text-xs">Root touch up service</p>
+                  </div>
+                  <span class="text-senary font-bold text-sm"
+                    >Rp 150k - 250k</span
+                  >
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">One Tone Coloring</p>
+                    <p class="text-white/70 text-xs">Full hair coloring</p>
+                  </div>
+                  <span class="text-senary font-bold text-sm"
+                    >Rp 250k - 450k</span
+                  >
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Balayage</p>
+                    <p class="text-white/70 text-xs">
+                      Premium balayage technique
                     </p>
-                    <a href="#contact">
-                      <button class="bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
-                          Book Appointment Now
-                      </button>
-                    </a>
-                    <div class="flex items-center justify-center space-x-4 text-white/60 mt-8">
-                        <span class="iconify w-6 h-6" data-icon="mdi:chevron-down"></span>
-                        <span>Scroll untuk melanjutkan</span>
-                        <span class="iconify w-6 h-6" data-icon="mdi:chevron-down"></span>
-                    </div>
-                </div>
+                  </div>
+                  <span class="text-senary font-bold text-sm"
+                    >Rp 250k - 600k</span
+                  >
+                </li>
+              </ul>
+              <a href="#contact">
+                <button
+                  class="w-full bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
+                  Book Now
+                </button>
+              </a>
             </div>
+            <div
+              class="flex items-center justify-center space-x-4 text-white/60">
+              <span>Geser untuk lihat lebih banyak</span>
+              <span
+                class="iconify w-6 h-6"
+                data-icon="mdi:chevron-right"></span>
+            </div>
+          </div>
 
+          <div
+            class="min-w-screen h-screen flex flex-col items-center justify-center px-8">
+            <div
+              class="glass-card rounded-2xl p-6 max-w-sm w-full text-center border-2 border-senary relative">
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span
+                  class="bg-gradient-to-r from-senary to-primary px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  Most Popular
+                </span>
+              </div>
+              <div class="mb-6 pt-3">
+                <span
+                  class="iconify w-12 h-12 text-senary mb-4 block mx-auto"
+                  data-icon="mdi:hair-dryer"></span>
+                <h3 class="text-2xl font-playfair font-bold mb-3">Hair Care</h3>
+                <div class="text-xl font-bold gradient-text mb-3">
+                  Start From Rp 35.000
+                </div>
+              </div>
+              <ul class="text-left space-y-2 mb-6">
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Potong Rambut</p>
+                    <p class="text-white/70 text-xs">Professional haircut</p>
+                  </div>
+                  <span class="text-senary font-bold text-sm">Rp 35k</span>
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Cuci Rambut</p>
+                    <p class="text-white/70 text-xs">Hair wash service</p>
+                  </div>
+                  <span class="text-senary font-bold text-sm">Rp 35k</span>
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Blow / Catok / Curly</p>
+                    <p class="text-white/70 text-xs">Hair styling options</p>
+                  </div>
+                  <span class="text-senary font-bold text-sm">Rp 50k</span>
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Hair Spa</p>
+                    <p class="text-white/70 text-xs">Relaxing hair treatment</p>
+                  </div>
+                  <span class="text-senary font-bold text-sm"
+                    >Rp 60k - 75k</span
+                  >
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Hair Mask</p>
+                    <p class="text-white/70 text-xs">Nourishing hair mask</p>
+                  </div>
+                  <span class="text-senary font-bold text-sm"
+                    >Rp 60k - 85k</span
+                  >
+                </li>
+              </ul>
+              <a href="#contact">
+                <button
+                  class="w-full bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
+                  Book Now
+                </button>
+              </a>
+            </div>
+            <div
+              class="flex items-center justify-center space-x-4 text-white/60">
+              <span>Geser untuk lihat lebih banyak</span>
+              <span
+                class="iconify w-6 h-6"
+                data-icon="mdi:chevron-right"></span>
+            </div>
+          </div>
+
+          <div
+            class="min-w-screen h-screen flex flex-col items-center justify-center px-8">
+            <div
+              class="glass-card rounded-2xl p-6 max-w-sm w-full text-center border-2 border-pink-400/30">
+              <div class="mb-6">
+                <span
+                  class="iconify w-12 h-12 text-senary mb-4 block mx-auto"
+                  data-icon="mdi:face-woman-outline"></span>
+                <h3 class="text-2xl font-playfair font-bold mb-3">
+                  Face Treatment
+                </h3>
+                <div class="text-xl font-bold gradient-text mb-3">
+                  Start From Rp 50.000
+                </div>
+              </div>
+              <ul class="text-left space-y-2 mb-6">
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Facial Basic</p>
+                    <p class="text-white/70 text-xs">Basic facial cleansing</p>
+                  </div>
+                  <span class="text-senary font-bold text-sm">Rp 100k</span>
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Facial Acne</p>
+                    <p class="text-white/70 text-xs">Acne treatment facial</p>
+                  </div>
+                  <span class="text-senary font-bold text-sm">Rp 150k</span>
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Facial Totok</p>
+                    <p class="text-white/70 text-xs">
+                      Traditional facial massage
+                    </p>
+                  </div>
+                  <span class="text-senary font-bold text-sm">Rp 150k</span>
+                </li>
+                <li
+                  class="flex items-center justify-between p-2 bg-white/5 rounded-lg">
+                  <div>
+                    <p class="font-semibold text-sm">Gold Face Mask</p>
+                    <p class="text-white/70 text-xs">
+                      Luxury gold mask treatment
+                    </p>
+                  </div>
+                  <span class="text-senary font-bold text-sm">Rp 50k</span>
+                </li>
+              </ul>
+              <a href="#contact">
+                <button
+                  class="w-full bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
+                  Book Now
+                </button>
+              </a>
+            </div>
+            <div
+              class="flex items-center justify-center space-x-4 text-white/60">
+              <span>Geser untuk lihat lebih banyak</span>
+              <span
+                class="iconify w-6 h-6"
+                data-icon="mdi:chevron-right"></span>
+            </div>
+          </div>
+
+          <div
+            class="min-w-screen h-screen flex items-center justify-center px-8">
+            <div class="text-center max-w-4xl">
+              <h2
+                class="text-6xl md:text-8xl font-playfair font-bold mb-8 gradient-text">
+                Ready to Book?
+              </h2>
+              <p class="text-2xl text-white/80 mb-12">
+                Hubungi kami sekarang untuk appointment
+              </p>
+              <a href="#contact">
+                <button
+                  class="bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
+                  Book Appointment Now
+                </button>
+              </a>
+              <div
+                class="flex items-center justify-center space-x-4 text-white/60 mt-8">
+                <span
+                  class="iconify w-6 h-6"
+                  data-icon="mdi:chevron-down"></span>
+                <span>Scroll untuk melanjutkan</span>
+                <span
+                  class="iconify w-6 h-6"
+                  data-icon="mdi:chevron-down"></span>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
       <section id="products" class="z-10 py-20 px-4">
         <div class="max-w-6xl mx-auto">
@@ -493,7 +577,7 @@
               <div
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
-                  class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                  class="min-w-16 min-h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
                   <span
                     class="iconify text-white w-8 h-8"
                     data-icon="mdi:map-marker"></span>
@@ -510,7 +594,7 @@
               <div
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
-                  class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                  class="min-w-16 min-h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
                   <span
                     class="iconify text-white w-8 h-8"
                     data-icon="mdi:phone"></span>
@@ -524,7 +608,7 @@
               <div
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
-                  class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                  class="min-w-16 min-h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
                   <span
                     class="iconify text-white w-8 h-8"
                     data-icon="mdi:email"></span>
@@ -539,7 +623,7 @@
               <div
                 class="floating-card rounded-2xl p-6 flex items-center space-x-4">
                 <div
-                  class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                  class="min-w-16 min-h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
                   <span
                     class="iconify text-white w-8 h-8"
                     data-icon="mdi:clock-time-eight"></span>
@@ -584,15 +668,15 @@
                     placeholder="Masukkan email" />
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-4">
+                <div class="grid md:grid-cols-2 gap-4 w-full">
                   <div>
                     <label class="block text-sm font-medium mb-2"
                       >Layanan</label
                     >
-                    <div class="relative inline-block w-64">
+                    <div class="relative inline-block w-full">
                       <div
                         id="dropdownButton"
-                        class="btn w-full px-6 py-3 text-left rounded-lg bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 flex justify-between items-center">
+                        class="btn-layanan w-full px-6 py-3 text-left rounded-lg bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 flex justify-between items-center">
                         <span id="selectedOption">Pilih layanan</span>
                         <span
                           class="iconify w-5 h-5"
@@ -657,7 +741,9 @@
       </div>
     </div>
 
-    <footer class="z-10 relative w-full h-screen overflow-hidden">
+    <footer
+      class="relative w-full min-h-screen lg:h-screen overflow-hidden z-10">
+      <!-- Background SVG -->
       <div class="absolute inset-0 w-full h-full">
         <img
           loading="lazy"
@@ -666,40 +752,137 @@
           class="w-full h-full object-cover" />
       </div>
 
-      <div class="absolute inset-0 flex items-center justify-center p-6">
+      <div class="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
         <div
-          class="bg-white/10 backdrop-blur-sm border border-white/5 rounded-3xl p-8 md:p-12 max-w-6xl w-full mx-4 shadow-2xl">
-          <div class="text-center text-white space-y-6">
-            <h2
-              class="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
-              Salon Dian Tanjung
-            </h2>
-
-            <div class="space-y-3 font-inter">
-              <p class="text-white/90 text-base md:text-lg">
-                Perum Griya Telaga Permai Blok C8 No 17, Cilangkap, Depok 16458
+          class="bg-white/10 backdrop-blur-sm border border-white/5 rounded-3xl p-6 md:p-8 lg:p-12 max-w-6xl w-full mx-4 shadow-2xl text-white">
+          <div class="flex flex-col lg:flex-row gap-6 mb-8 lg:mb-12">
+            <div class="flex-1 max-w-xs mx-auto lg:mx-0">
+              <div
+                class="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-6">
+                <div
+                  class="w-14 h-14 lg:w-16 lg:h-16 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <img
+                    loading="lazy"
+                    src="./assets/images/LOGO_ITS_DAY_ONLY_IT_PUTIH.png"
+                    alt="Logo DT Salon"
+                    class="object-contain" />
+                </div>
+              </div>
+              <p
+                class="text-white/80 text-sm lg:text-base mb-4 text-center lg:text-left">
+                Salon kecantikan profesional dengan pengalaman 17 tahun melayani
+                pelanggan dengan hasil terbaik.
               </p>
-              <p class="text-white/90 text-base md:text-lg">
-                Telp: +62 821 1244 4589 | Email: info@dtsalon.com
-              </p>
+              <div class="flex justify-center lg:justify-start space-x-4">
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-white transition-colors"
+                  aria-label="Instagram">
+                  <span
+                    class="text-xl sm:text-2xl iconify"
+                    data-icon="mdi:instagram"></span>
+                </a>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-white transition-colors"
+                  aria-label="Facebook">
+                  <span
+                    class="text-xl sm:text-2xl iconify"
+                    data-icon="mdi:facebook"></span>
+                </a>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-white transition-colors"
+                  aria-label="WhatsApp">
+                  <span
+                    class="text-xl sm:text-2xl iconify"
+                    data-icon="mdi:whatsapp"></span>
+                </a>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-white transition-colors"
+                  aria-label="Email">
+                  <span
+                    class="text-xl sm:text-2xl iconify"
+                    data-icon="mdi:email"></span>
+                </a>
+              </div>
             </div>
 
-            <div class="flex justify-center space-x-6 pt-4">
-              <!-- Ikon Tol -->
-              <a
-                href="#"
-                class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-1 transition-all duration-300 hover:scale-110">
-                <img src="./assets/images/icons/email.svg" width="24" />
-              </a>
-            </div>
+            <div
+              class="lg:ml-56 grid grid-cols-2 gap-6 sm:gap-8 flex-1 mt-6 sm:mt-0">
+              <div>
+                <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+                  Layanan
+                </h3>
+                <ul
+                  class="space-y-1 sm:space-y-2 text-sm sm:text-base text-white/80">
+                  <li>
+                    <a href="#" class="hover:text-white transition"
+                      >Hair Coloring</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition"
+                      >Hair Treatment</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition"
+                      >Facial Care</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition"
+                      >Nail Care</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white transition">Makeup</a>
+                  </li>
+                </ul>
+              </div>
 
-            <div class="border-t border-white/20 pt-6 mt-8">
-              <p class="text-white/60 text-sm font-inter">
-                &copy; 2025 Salon Dian Tanjung. All rights reserved.
-              </p>
+              <div>
+                <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+                  Kontak
+                </h3>
+                <ul
+                  class="space-y-2 sm:space-y-3 text-sm sm:text-base text-white/80">
+                  <li class="flex items-start gap-2">
+                    <span
+                      class="iconify mt-0.5"
+                      data-icon="mdi:map-marker"></span>
+                    <span>Perum Griya Telaga Permai Blok C8 No 17, Depok</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="iconify" data-icon="mdi:phone"></span>
+                    <span>+62 821 1244 4589</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="iconify" data-icon="mdi:email"></span>
+                    <span>info@dtsalon.com</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+
+          <div
+            class="border-t border-white/10 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+            <p class="text-white/60 text-xs sm:text-sm order-2 sm:order-1">
+              &copy; 2025 DT Salon. All rights reserved.
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div
+        class="absolute bottom-0 left-0 w-full text-center pointer-events-none">
+        <h1
+          class="text-[18vw] sm:text-[14vw] lg:text-[12vw] font-bold text-white/20 font-playfair leading-none">
+          DT Salon
+        </h1>
       </div>
     </footer>
   </body>
