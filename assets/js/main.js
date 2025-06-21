@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "lenis/dist/lenis.css";
 
-// Inisialisasi Lenis smooth scroll
 const lenis = new Lenis();
 gsap.registerPlugin(ScrollTrigger, SplitText);
 lenis.on("scroll", ScrollTrigger.update);
@@ -15,7 +14,6 @@ gsap.ticker.add((time) => {
 });
 gsap.ticker.lagSmoothing(0);
 
-// Cursor custom untuk desktop
 const gradientCursor = document.getElementById("gradientCursor");
 const gradientCursorInner = document.getElementById("gradientCursorInner");
 
@@ -30,7 +28,6 @@ function isMobile() {
   return window.innerWidth < 768 || screen.width < 768;
 }
 
-// Animasi teks hero
 const heroText = new SplitText("#hero-title, #hero-subtitle", {
   type: "words",
 });
@@ -46,7 +43,6 @@ gsap.fromTo(
   }
 );
 
-// Animasi section title & subtitle
 const sections = [
   "#overview-title, #overview-subtitle",
   "#services-title, #services-subtitle",
@@ -75,7 +71,6 @@ sections.forEach((selector) => {
   );
 });
 
-// Animasi card
 document.querySelectorAll(".card").forEach((card, i) => {
   gsap.from(card, {
     y: 50,
@@ -91,7 +86,6 @@ document.querySelectorAll(".card").forEach((card, i) => {
   });
 });
 
-// Hover text animation
 function initHoverEffects() {
   document.querySelectorAll(".hover-rotate-text").forEach((element) => {
     const original = element.querySelector("span");
@@ -134,7 +128,6 @@ function initHoverEffects() {
 }
 initHoverEffects();
 
-// Navbar shadow on scroll
 window.addEventListener("scroll", () => {
   const navbar = document.getElementById("navbar");
   if (window.scrollY > 5) {
@@ -154,7 +147,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Custom cursor (desktop only)
 if (!isMobile()) {
   window.addEventListener("mousemove", (e) => {
     const target = e.target;
@@ -181,7 +173,6 @@ if (!isMobile()) {
     });
   });
 
-  // Smooth follow
   gsap.ticker.add(() => {
     cursorX += (mouseX - cursorX) * 0.05;
     cursorY += (mouseY - cursorY) * 0.05;
@@ -193,7 +184,6 @@ if (!isMobile()) {
   });
 }
 
-// Dropdown logic
 const dropdownBtn = document.getElementById("dropdownButton");
 const dropdownList = document.getElementById("dropdownList");
 const selectedOption = document.getElementById("selectedOption");
@@ -215,7 +205,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Counter animations
 document.querySelectorAll(".count").forEach((counter) => {
   const target = +counter.dataset.target;
   const obj = { val: 0 };
@@ -227,7 +216,6 @@ document.querySelectorAll(".count").forEach((counter) => {
   });
 });
 
-// Toggle produk (jika ada bagian produk)
 const toggleBtn = document.getElementById("ToggleBtn");
 const productGrid = document.getElementById("productGrid");
 if (toggleBtn && productGrid) {
@@ -290,9 +278,8 @@ if (toggleBtn && productGrid) {
   });
 }
 
-
-const container = document.querySelector('.pricing-cards-container');
-const cards = gsap.utils.toArray('.pricing-cards-container > div');
+const container = document.querySelector(".pricing-cards-container");
+const cards = gsap.utils.toArray(".pricing-cards-container > div");
 
 gsap.to(container, {
   xPercent: -100 * (cards.length - 1),
@@ -302,9 +289,6 @@ gsap.to(container, {
     pin: true,
     scrub: 1,
     end: () => "+=" + container.scrollWidth,
-    invalidateOnRefresh: true
-  }
+    invalidateOnRefresh: true,
+  },
 });
-
-//lama bgt jir gua buatnya 
-// big thanksss ke ey ayy cukk
