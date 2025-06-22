@@ -8,6 +8,7 @@ import { customSelect } from "./custom-select.js";
 import { counterAnimation } from "./animation/counter-animation.js";
 import { productToggle } from "./animation/product-toggle.js";
 import { pricingSection } from "./pricing-section.js";
+import { productDetails } from "./product-details.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   animateHero();
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   counterAnimation();
   productToggle();
   pricingSection();
+  productDetails();
 
   if (window.innerWidth >= 768) {
     import("./cursor.js").then(({ cursorEffect }) => {
