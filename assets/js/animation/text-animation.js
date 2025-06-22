@@ -3,14 +3,26 @@ import { SplitText } from "gsap/SplitText";
 
 export function textAnimation() {
   const sections = [
-    "#overview-title, #overview-subtitle",
-    "#services-title, #services-subtitle",
-    "#pricing-title, #pricing-subtitle",
-    "#contact-title, #contact-subtitle",
+    {
+      trigger: "#overview",
+      targets: "#overview-title, #overview-subtitle",
+    },
+    {
+      trigger: "#pricing",
+      targets: "#pricing-title, #pricing-subtitle",
+    },
+    {
+      trigger: "#products",
+      targets: "#products-title, #products-subtitle",
+    },
+    {
+      trigger: "#contact",
+      targets: "#contact-title, #contact-subtitle",
+    },
   ];
 
-  sections.forEach((selector) => {
-    const split = new SplitText(selector, { type: "words" });
+  sections.forEach(({ trigger, targets }) => {
+    const split = new SplitText(targets, { type: "words" });
     gsap.fromTo(
       split.words,
       { y: 100, opacity: 0 },
@@ -21,7 +33,7 @@ export function textAnimation() {
         stagger: 0.05,
         ease: "power4.out",
         scrollTrigger: {
-          trigger: selector.split(",")[0],
+          trigger: trigger,
           start: "top 85%",
           end: "bottom center",
           toggleActions: "play none none reverse",

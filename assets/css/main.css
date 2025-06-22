@@ -26,6 +26,10 @@ html {
   overflow: -moz-scrollbars-none;
 }
 
+#mobileMenu a {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
 .glass-card {
   @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300;
 }
