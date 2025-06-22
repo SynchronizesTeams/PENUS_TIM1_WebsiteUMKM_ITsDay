@@ -8,11 +8,12 @@ export function animateHero() {
 
   gsap.fromTo(
     heroText.words,
-    { y: 100 },
+    { y: 100, opacity: 0 },
     {
       y: 0,
-      duration: 1.2,
-      stagger: 0.08,
+      opacity: 1,
+      duration: 1.5,
+      stagger: 0.1,
       ease: "power4.out",
     }
   );
