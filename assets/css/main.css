@@ -26,6 +26,10 @@ html {
   overflow: -moz-scrollbars-none;
 }
 
+#mobileMenu a {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
 .glass-card {
   @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300;
 }
@@ -46,38 +50,6 @@ html {
   @apply inline-block;
 }
 
-.btn {
-  cursor: pointer;
-}
-
-.nav-item {
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.nav-item::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: var(--color-primary);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.nav-item:hover::after {
-  width: 100%;
-}
-
-.hero-subtitle {
-  background: linear-gradient(150deg, var(--color-quinary) 0%, #e1e1e1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 #hero-title {
   font-size: clamp(3rem, 5.5vw, 5.5rem);
 }
@@ -95,6 +67,7 @@ html {
 }
 
 .btn {
+  cursor: pointer;
   padding: clamp(0.5rem, 1.2vw, 0.85rem) clamp(1.125rem, 2vw, 1.25rem);
   font-size: clamp(0.9rem, 1.2vw, 1.125rem);
 }
