@@ -6,16 +6,14 @@ export function animateHero() {
     type: "words",
   });
 
-  requestIdleCallback(() => {
-    gsap.fromTo(
-      heroText.words,
-      { y: 100 },
-      {
-        y: 0,
-        duration: 1.2,
-        stagger: 0.08,
-        ease: "power4.out",
-      }
-    );
-  });
+  gsap.fromTo(
+    heroText.words,
+    { y: 100 },
+    {
+      y: 0,
+      duration: 1.2,
+      stagger: 0.08,
+      ease: "power4.out",
+    }
+  );
 }
