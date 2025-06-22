@@ -9,7 +9,7 @@ export function animateHero() {
   requestIdleCallback(() => {
     gsap.fromTo(
       heroText.words,
-      { y: 100, opacity: 1 },
+      { y: 100 },
       {
         y: 0,
         duration: 1.2,
