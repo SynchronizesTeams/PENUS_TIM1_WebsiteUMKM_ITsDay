@@ -9,6 +9,7 @@ import { counterAnimation } from "./animation/counter-animation.js";
 import { productToggle } from "./animation/product-toggle.js";
 import { pricingSection } from "./pricing-section.js";
 import { productDetails } from "./product-details.js";
+import { submitForm } from "./contact.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   animateHero();
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   productToggle();
   pricingSection();
   productDetails();
+  submitForm();
 
   if (window.innerWidth >= 768) {
     import("./cursor.js").then(({ cursorEffect }) => {

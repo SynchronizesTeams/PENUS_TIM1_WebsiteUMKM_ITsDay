@@ -710,13 +710,14 @@
 
             <div class="floating-card rounded-3xl p-8">
               <h3 class="text-2xl font-semibold mb-6">Book Appointment</h3>
-              <form class="space-y-6">
+              <form class="space-y-6" id="appointmentForm">
                 <div class="grid md:grid-cols-2 gap-4">
                   <div>
                     <label class="block text-sm font-medium mb-2"
                       >Nama Lengkap</label
                     >
                     <input
+                      id="nama"
                       type="text"
                       class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
                       placeholder="Masukkan nama lengkap" />
@@ -726,6 +727,7 @@
                       >Nomor Telepon</label
                     >
                     <input
+                      id="telepon"
                       type="tel"
                       class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
                       placeholder="Masukkan nomor telepon" />
@@ -735,6 +737,7 @@
                 <div>
                   <label class="block text-sm font-medium mb-2">Email</label>
                   <input
+                    id="email"
                     type="email"
                     class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
                     placeholder="Masukkan email" />
@@ -778,6 +781,7 @@
                       >Tanggal Preferred</label
                     >
                     <input
+                      id="date"
                       type="date"
                       class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors" />
                   </div>
@@ -788,12 +792,14 @@
                     >Pesan Tambahan</label
                   >
                   <textarea
+                    id="pesanTambahan"
                     rows="4"
                     class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
                     placeholder="Tambahkan pesan atau request khusus..."></textarea>
                 </div>
 
                 <button
+                  id="submitBtn"
                   type="submit"
                   class="btn w-full bg-gradient-to-br from-primary to-secondary shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 py-3 px-6 rounded-lg font-medium cursor-pointer">
                   Send Message
