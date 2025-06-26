@@ -72,6 +72,10 @@ html {
   font-size: clamp(0.85rem, 1.5vw, 1.15rem);
 }
 
+/* .count-container {
+  bottom: clamp(25);
+} */
+
 .count-container .count {
   font-size: clamp(1.125rem, 1.5vw, 1.5rem);
 }
@@ -132,7 +136,7 @@ footer h2 {
     mix-blend-mode: screen;
     transform: translate(-50%, -50%);
   }
-
+  
   .gradient-cursor-inner {
     position: fixed;
     width: 200px;
@@ -149,5 +153,9 @@ footer h2 {
     z-index: 2;
     mix-blend-mode: screen;
     transform: translate(-50%, -50%);
+  }
+
+  .count-wrapper {
+    bottom: 6.25rem;
   }
 }
