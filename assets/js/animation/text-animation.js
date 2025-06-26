@@ -8,6 +8,10 @@ export function textAnimation() {
       targets: "#overview-title, #overview-subtitle",
     },
     {
+      trigger: "#about",
+      targets: "#about-title, #about-text",
+    },
+    {
       trigger: "#pricing",
       targets: "#pricing-title, #pricing-subtitle",
     },

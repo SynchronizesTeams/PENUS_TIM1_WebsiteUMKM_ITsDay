@@ -72,10 +72,6 @@ html {
   font-size: clamp(0.85rem, 1.5vw, 1.15rem);
 }
 
-/* .count-container {
-  bottom: clamp(25);
-} */
-
 .count-container .count {
   font-size: clamp(1.125rem, 1.5vw, 1.5rem);
 }
@@ -119,6 +115,7 @@ footer h2 {
 
 @media (min-width: 768px) {
   .gradient-cursor {
+    z-index: 2;
     position: fixed;
     width: 400px;
     height: 400px;
@@ -138,6 +135,7 @@ footer h2 {
   }
   
   .gradient-cursor-inner {
+    z-index: 1;
     position: fixed;
     width: 200px;
     height: 200px;
