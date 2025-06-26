@@ -22,7 +22,7 @@ Melalui website ini, pelanggan dapat mengeksplorasi daftar layanan, melihat kata
 
 **Scripting:** Javascript
 
-**Others:** Iconify, Google Font, Lenis
+**Others:** Iconify, Google Font
 ## 🔗 Links
-[![website](https://img.shields.io/badge/dt_salon-9d0b85?style=for-the-badge)](https://salondiantanjung.my.id/)
+[![portofolio](https://img.shields.io/badge/dt_salon-9d0b85?style=for-the-badge)](https://salondiantanjung.my.id/)
 
