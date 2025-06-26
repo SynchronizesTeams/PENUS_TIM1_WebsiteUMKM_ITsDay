@@ -59,17 +59,17 @@ html {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
 }
 
 .section-subtitle {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.15rem, 2vw, 1.25rem);
 }
 
 .btn {
   cursor: pointer;
-  padding: clamp(0.5rem, 1.2vw, 0.85rem) clamp(1.125rem, 2vw, 1.25rem);
-  font-size: clamp(0.9rem, 1.2vw, 1.125rem);
+  padding: clamp(0.45rem, 1.5vw, 0.8rem) clamp(1.15rem, 2vw, 1.15rem);
+  font-size: clamp(0.85rem, 1.5vw, 1.15rem);
 }
 
 /* .count-container {
