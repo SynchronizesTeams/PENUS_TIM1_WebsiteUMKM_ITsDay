@@ -6,27 +6,23 @@ import { hoverEffect } from "./animation/hover-animation.js";
 import { navbarScroll } from "./navbar-effect.js";
 import { customSelect } from "./custom-select.js";
 import { counterAnimation } from "./animation/counter-animation.js";
-import { productToggle } from "./animation/product-toggle.js";
 import { pricingSection } from "./pricing-section.js";
-import { productDetails } from "./product-details.js";
 import { submitForm } from "./contact.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   animateHero();
   textAnimation();
   animateCards();
-  hoverEffect();
   navbarScroll();
   customSelect();
   counterAnimation();
-  productToggle();
   pricingSection();
-  productDetails();
   submitForm();
 
   if (window.innerWidth >= 768) {
     import("./cursor.js").then(({ cursorEffect }) => {
       cursorEffect();
+      hoverEffect();
     });
   }
 });
